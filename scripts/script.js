@@ -1,7 +1,5 @@
-// No console.logs here for production as per audit
-
-// Example: Add event listeners in modern vanilla JS (if needed)
+// No console logs or inline JS allowed
 document.addEventListener('DOMContentLoaded', () => {
-    // You can add any JS here for interaction
+    // Placeholder for future JavaScript code
   });
   
