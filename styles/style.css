@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #004466;
+    color: white;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    background: #eee;
+    padding: 1rem;
+  }
+  
