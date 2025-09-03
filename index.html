@@ -2,46 +2,44 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meline's WDD 231 Course Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Meline's WDD 231 Course Home Page" />
   <meta name="author" content="Meline" />
-  
-  <!-- Google Fonts: combined preconnect and link -->
+  <title>Meline's WDD 231 Course Home Page</title>
+
+  <!-- Google Fonts: preconnect + single link -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#section1">Section One</a></li>
-        <li><a href="#section2">Section Two</a></li>
-        <li><a href="#section3">Section Three</a></li>
-      </ul>
-    </nav>
+    <h1>Meline's WDD 231 Course Home Page</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <h1>Meline's WDD 231 Course Home Page</h1>
-    
-    <section id="section1">
-      <h2>Section One</h2>
-      <p>Welcome to section one content.</p>
+    <section>
+      <h2>Welcome</h2>
+      <p>This is the course home page for WDD 231.</p>
     </section>
-
-    <section id="section2">
-      <h2>Section Two</h2>
-      <p>Welcome to section two content.</p>
+    <section>
+      <h2>Course Info</h2>
+      <p>All important course resources will be listed here.</p>
     </section>
-
-    <section id="section3">
-      <h2>Section Three</h2>
-      <p>Welcome to section three content.</p>
+    <section>
+      <h2>Assignments</h2>
+      <p>Track your assignments and progress.</p>
     </section>
   </main>
 
@@ -49,7 +47,7 @@
     <p>&copy; 2025 Meline</p>
   </footer>
 
-  <!-- External JS -->
-  <script src="scripts/script.js"></script>
+  <!-- JS with defer -->
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>

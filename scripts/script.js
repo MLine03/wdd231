@@ -1,5 +1,7 @@
-// Sample JS - No console.logs, no onclick attributes
+// script.js
+
+// Example: simple DOM ready log
 document.addEventListener('DOMContentLoaded', () => {
-    // Add event listeners or JS code here if needed
+    console.log('Script loaded and DOM is ready.');
   });
   
