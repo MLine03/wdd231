@@ -1,7 +1,7 @@
-// script.js
-
-// Example: simple DOM ready log
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Script loaded and DOM is ready.');
+// Set current year in footer
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
   });
   
