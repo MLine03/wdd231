@@ -6,28 +6,26 @@ const courses = [
     { name: 'CIT 230', subject: 'Design', credits: 3, completed: false }
   ];
   
-  // Filter Buttons
-  const filters = [...new Set(courses.map(course => course.subject))];
+  // Generate filter buttons
   const filtersContainer = document.getElementById('filters');
+  const uniqueSubjects = [...new Set(courses.map(course => course.subject))];
   
-  filters.forEach(subject => {
-    const button = document.createElement('button');
-    button.textContent = subject;
-    button.addEventListener('click', () => showCourses(subject));
-    filtersContainer.appendChild(button);
+  uniqueSubjects.forEach(subject => {
+    const btn = document.createElement('button');
+    btn.textContent = subject;
+    btn.addEventListener('click', () => filterCourses(subject));
+    filtersContainer.appendChild(btn);
   });
   
-  // Display Courses by Subject
   const courseList = document.getElementById('course-list');
   const creditsDisplay = document.getElementById('total-credits');
   
-  function showCourses(subject) {
+  function filterCourses(subject) {
     courseList.innerHTML = '';
+    const filtered = courses.filter(c => c.subject === subject);
     let total = 0;
   
-    const filteredCourses = courses.filter(course => course.subject === subject);
-  
-    filteredCourses.forEach(course => {
+    filtered.forEach(course => {
       const li = document.createElement('li');
       li.textContent = `${course.name} (${course.credits} credits)`;
       if (course.completed) {
@@ -41,7 +39,7 @@ const courses = [
     creditsDisplay.textContent = total;
   }
   
-  // Footer Dynamic Year and Last Modified
+  // Footer dynamic content
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = document.lastModified;
   
