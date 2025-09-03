@@ -1,44 +1,47 @@
-// Example course data
+// Sample course data
 const courses = [
     { name: 'WDD 130', subject: 'Web', credits: 3, completed: true },
     { name: 'WDD 231', subject: 'Web', credits: 3, completed: false },
     { name: 'CIT 160', subject: 'Programming', credits: 3, completed: true },
-    { name: 'CIT 230', subject: 'Design', credits: 3, completed: false },
+    { name: 'CIT 230', subject: 'Design', credits: 3, completed: false }
   ];
   
-  // Generate course filters
+  // Filter Buttons
   const filters = [...new Set(courses.map(course => course.subject))];
   const filtersContainer = document.getElementById('filters');
+  
   filters.forEach(subject => {
     const button = document.createElement('button');
     button.textContent = subject;
-    button.onclick = () => showCourses(subject);
+    button.addEventListener('click', () => showCourses(subject));
     filtersContainer.appendChild(button);
   });
   
-  // Show courses
-  const list = document.getElementById('course-list');
+  // Display Courses by Subject
+  const courseList = document.getElementById('course-list');
+  const creditsDisplay = document.getElementById('total-credits');
+  
   function showCourses(subject) {
-    list.innerHTML = '';
+    courseList.innerHTML = '';
     let total = 0;
   
-    const filtered = courses.filter(course => course.subject === subject);
+    const filteredCourses = courses.filter(course => course.subject === subject);
   
-    filtered.forEach(course => {
+    filteredCourses.forEach(course => {
       const li = document.createElement('li');
       li.textContent = `${course.name} (${course.credits} credits)`;
       if (course.completed) {
         li.style.fontWeight = 'bold';
         li.style.color = 'green';
       }
-      list.appendChild(li);
+      courseList.appendChild(li);
       total += course.credits;
     });
   
-    document.getElementById('total-credits').textContent = total;
+    creditsDisplay.textContent = total;
   }
   
-  // Footer Year and Last Modified
+  // Footer Dynamic Year and Last Modified
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = document.lastModified;
   
