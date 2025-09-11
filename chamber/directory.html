@@ -4,59 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sampletown Chamber of Commerce Directory</title>
-  <meta name="description" content="Explore trusted local businesses in Sampletown through our Chamber Directory. Discover services, contacts, and more.">
-  <meta name="author" content="Your Full Name">
+  <title>Sampletown Chamber Directory</title>
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce">
+  <meta name="author" content="Meline Levao">
 
-  <!-- Google Fonts preconnect and single link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Google Fonts preload & link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
   <!-- Open Graph Meta -->
-  <meta property="og:title" content="Sampletown Chamber of Commerce">
+  <meta property="og:title" content="Sampletown Chamber Commerce">
   <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
   <meta property="og:image" content="images/social-banner.jpg">
   <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
+    <h1>Sampletown Chamber Directory</h1>
     <nav>
       <ul>
         <li><a href="directory.html">Directory</a></li>
-        <li><a href="events.html">Events</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Sampletown Chamber of Commerce Directory</h1>
-
-    <section class="view-toggle">
+    <div class="view-toggle" role="region" aria-label="View toggle buttons">
       <button id="gridViewBtn" aria-pressed="true">Grid View</button>
       <button id="listViewBtn" aria-pressed="false">List View</button>
-    </section>
+    </div>
 
-    <section id="members" class="grid-view" aria-live="polite">
-      <!-- JS will inject member cards here -->
-    </section>
+    <section id="members" class="grid-view" aria-live="polite" aria-atomic="true"></section>
   </main>
 
   <footer>
-    <p>Contact: info@sampletownchamber.com | Phone: (555) 555-5555</p>
-    <p>Your Full Name | WDD 231</p>
     <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>Last updated: <span id="lastModified"></span></p>
   </footer>
 
+  <!-- JavaScript -->
   <script src="scripts/directory.js" defer></script>
 </body>
 </html>

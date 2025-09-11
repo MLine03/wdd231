@@ -1,3 +1,6 @@
+/* normalize.css should be linked separately */
+/* styles.css - main stylesheet */
+
 /* Reset some default styles */
 *,
 *::before,
@@ -16,7 +19,7 @@ body {
   padding: 1rem;
 }
 
-/* Appearance reset for form controls */
+/* Appearance reset for form controls (line ~199) */
 button,
 input,
 select,
@@ -28,7 +31,7 @@ textarea {
 
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; /* ✅ Added standard appearance */
+  appearance: none; /* standard property added for compatibility */
 }
 
 /* Header styling */
@@ -88,7 +91,7 @@ main {
 
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; /* ✅ Added here too */
+  appearance: none; /* standard property added for compatibility */
 }
 
 .view-toggle button:hover,
@@ -109,7 +112,7 @@ main {
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
 

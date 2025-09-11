@@ -1,91 +1,119 @@
-/* Base/reset adjustments already handled by normalize */
+/* styles.css - main stylesheet */
 
-/* Typography & Body */
-body {
-  font-family: 'Roboto', sans-serif;
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 0;
 }
 
-/* Header and Navigation */
-header {
-  background-color: #004080;
-  color: white;
+/* Body and font setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
   padding: 1rem;
 }
 
+/* Appearance reset for form controls */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* standard property added for compatibility */
+}
+
+/* Header styling */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* Navigation styles */
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
+  background-color: #0066cc;
+  padding: 0.5rem 0;
 }
 
-nav a {
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-nav a:hover,
-nav a:focus {
+nav ul li a:hover,
+nav ul li a:focus {
   text-decoration: underline;
 }
 
-/* Main & H1 */
+/* Main content */
 main {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
 }
 
-main h1 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-}
-
-/* View Toggle Buttons */
+/* Grid and list toggle buttons */
 .view-toggle {
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .view-toggle button {
-  background-color: #004080;
+  background-color: #0066cc;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-.view-toggle button[aria-pressed="true"] {
-  background-color: #0066cc;
+.view-toggle button:hover,
+.view-toggle button:focus {
+  background-color: #004080;
 }
 
-/* Members Grid/List Container */
+/* Members container grid and list styles */
 #members.grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 #members.list-view {
   display: block;
 }
 
-/* Member Cards */
+/* Member card */
 .member-card {
   background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   padding: 1rem;
-  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .member-card img {
@@ -96,33 +124,31 @@ main h1 {
 }
 
 .member-card h2 {
-  margin: 0.5rem 0;
   font-size: 1.25rem;
-  color: #004080;
+  margin-bottom: 0.5rem;
 }
 
 .member-card p {
-  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
-/* List view card adjustments */
-#members.list-view .member-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.member-card a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-#members.list-view .member-card img {
-  width: 120px;
-  margin-bottom: 0;
+.member-card a:hover,
+.member-card a:focus {
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  background-color: #004080;
-  color: white;
-  padding: 1rem;
   text-align: center;
+  font-size: 0.85rem;
+  padding: 1rem;
+  color: #555;
+  border-top: 1px solid #ccc;
   margin-top: 2rem;
-  font-size: 0.9rem;
 }
