@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">  <!-- Must be first -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sampletown Chamber Directory</title>
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <title>Sampletown Chamber of Commerce Directory</title>
+  <meta name="description" content="Explore trusted local businesses in Sampletown through our Chamber Directory. Discover services, addresses, and contacts.">
   <meta name="author" content="Your Full Name">
 
-  <!-- Google Fonts preconnect and combined link -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -20,15 +20,15 @@
   <meta property="og:title" content="Sampletown Chamber of Commerce">
   <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
   <meta property="og:image" content="images/social-banner.jpg">
-  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
   <header>
-    <h1>Sampletown Chamber Directory</h1>
     <nav>
       <ul>
         <li><a href="directory.html">Directory</a></li>
@@ -39,15 +39,15 @@
   </header>
 
   <main>
-    <!-- Layout toggle buttons -->
+    <h1>Sampletown Chamber Directory</h1>
+
     <div class="layout-toggle">
       <button id="gridViewBtn" aria-label="Show grid view">Grid View</button>
       <button id="listViewBtn" aria-label="Show list view">List View</button>
     </div>
 
-    <!-- Member container -->
     <section id="members" class="grid-view" aria-live="polite">
-      <!-- Member cards will be dynamically inserted here -->
+      <!-- Members will load here -->
     </section>
   </main>
 
@@ -59,3 +59,4 @@
   <script src="scripts/main.js" defer></script>
 </body>
 </html>
+`
