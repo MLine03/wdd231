@@ -2,68 +2,64 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  
-  <!-- Viewport for responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Page Title -->
   <title>Sampletown Chamber Directory</title>
-  
-  <!-- Meta Description -->
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce" />
-  
-  <!-- Meta Author -->
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce." />
   <meta name="author" content="Your Full Name" />
   
-  <!-- Facebook Open Graph Metadata -->
+  <!-- Facebook Open Graph meta -->
   <meta property="og:title" content="Sampletown Chamber of Commerce" />
   <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
-  <meta property="og:image" content="images/social-banner.jpg" />
+  <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/social-banner.jpg" />
   <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html" />
   
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  
-  <!-- Google Fonts preconnect and stylesheet -->
+  <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Google Fonts stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   
-  <!-- CSS Stylesheets -->
+  <!-- CSS files -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/styles.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" />
 </head>
 <body>
   <header>
-    <h1>Sampletown Chamber of Commerce Directory</h1>
+    <h1>Sampletown Chamber Directory</h1>
     <nav>
       <ul>
-        <li><a href="directory.html" title="Directory Page">Directory</a></li>
-        <li><a href="events.html" title="Events Page">Events</a></li>
-        <li><a href="contact.html" title="Contact Page">Contact</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- Add other nav items -->
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- Toggle Buttons for Grid/List -->
     <section id="view-toggle">
-      <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-      <button id="listViewBtn" aria-pressed="false">List View</button>
+      <button id="grid-view-btn" aria-pressed="true">Grid View</button>
+      <button id="list-view-btn" aria-pressed="false">List View</button>
     </section>
 
-    <section id="directory" class="grid">
-      <!-- Member cards will be loaded here by JS -->
+    <!-- Members Directory -->
+    <section id="members" class="grid-view" aria-live="polite">
+      <!-- Members will be populated here by JS -->
     </section>
   </main>
 
   <footer>
-    <p>Contact: info@sampletownchamber.com | 555-123-4567</p>
-    <p>Developed by Your Full Name | WDD 231</p>
-    <p id="lastModified"></p>
-    <p>&copy; <span id="year"></span> Sampletown Chamber of Commerce</p>
+    <p>Contact: contact@sampletownchamber.com | 555-123-4567</p>
+    <p>Your Full Name | WDD 231</p>
+    <p>&copy; <span id="copyright-year"></span> Sampletown Chamber of Commerce</p>
+    <p>Last modified: <span id="last-modified"></span></p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="scripts/main.js" defer></script>
 </body>
 </html>

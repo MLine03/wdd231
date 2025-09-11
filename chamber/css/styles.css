@@ -1,33 +1,32 @@
-/* Use Google Font */
+/* Base styling */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
 }
 
-header {
+header, footer {
   background-color: #004080;
   color: white;
   padding: 1rem;
-}
-
-header h1 {
-  margin: 0 0 0.5rem 0;
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0.5rem 0 0 0;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 nav a:hover,
@@ -35,63 +34,80 @@ nav a:focus {
   text-decoration: underline;
 }
 
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #view-toggle {
-  margin: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 #view-toggle button {
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#view-toggle button[aria-pressed="true"] {
   background-color: #004080;
   color: white;
   border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-#directory.grid {
+#view-toggle button[aria-pressed="true"] {
+  background-color: #0073e6;
+  font-weight: bold;
+}
+
+#members {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  padding: 1rem;
 }
 
-#directory.list {
+/* Grid view styling */
+.grid-view {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* List view styling */
+.list-view {
   display: block;
-  padding: 1rem;
 }
 
+/* Member card style */
 .member-card {
-  background: white;
+  background-color: white;
+  border: 1px solid #ccc;
   padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .member-card img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .member-card h2 {
-  margin: 0.5rem 0;
   font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .member-card p {
   margin: 0.25rem 0;
 }
 
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

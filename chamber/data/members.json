@@ -1,65 +1,58 @@
 [
   {
     "name": "TechZone",
-    "address": "123 Tech Blvd, Sampletown",
-    "phone": "555-0101",
+    "address": "123 Tech St, Sampletown",
+    "phone": "555-101-2020",
     "website": "https://techzone.example.com",
     "image": "techzone.png",
-    "membershipLevel": 3,
-    "description": "Leading tech solutions provider."
+    "membershipLevel": 3
   },
   {
     "name": "Healthy Eats",
-    "address": "456 Green St, Sampletown",
-    "phone": "555-0102",
+    "address": "456 Green Rd, Sampletown",
+    "phone": "555-303-4040",
     "website": "https://healthyeats.example.com",
     "image": "healthyeats.png",
-    "membershipLevel": 2,
-    "description": "Fresh and healthy meals."
+    "membershipLevel": 2
   },
   {
     "name": "Green Farm Market",
-    "address": "789 Farm Rd, Sampletown",
-    "phone": "555-0103",
-    "website": "https://greenfarm.example.com",
+    "address": "789 Farm Lane, Sampletown",
+    "phone": "555-505-6060",
+    "website": "https://greenfarmmarket.example.com",
     "image": "greenfarm.png",
-    "membershipLevel": 1,
-    "description": "Organic local farm products."
+    "membershipLevel": 1
   },
   {
     "name": "City Books",
-    "address": "321 Book Ln, Sampletown",
-    "phone": "555-0104",
+    "address": "101 Book Blvd, Sampletown",
+    "phone": "555-707-8080",
     "website": "https://citybooks.example.com",
     "image": "citybooks.png",
-    "membershipLevel": 2,
-    "description": "Your neighborhood bookstore."
+    "membershipLevel": 2
   },
   {
     "name": "FitClub Gym",
-    "address": "654 Fitness Ave, Sampletown",
-    "phone": "555-0105",
+    "address": "202 Fitness Ave, Sampletown",
+    "phone": "555-909-1010",
     "website": "https://fitclub.example.com",
     "image": "fitclub.png",
-    "membershipLevel": 3,
-    "description": "Gym and fitness classes."
+    "membershipLevel": 3
   },
   {
     "name": "Ice Cream Land",
-    "address": "987 Sweet St, Sampletown",
-    "phone": "555-0106",
+    "address": "303 Sweet St, Sampletown",
+    "phone": "555-111-2222",
     "website": "https://icecreamland.example.com",
     "image": "icecreamland.png",
-    "membershipLevel": 1,
-    "description": "Delicious ice cream treats."
+    "membershipLevel": 1
   },
   {
     "name": "CompuTech Repair",
-    "address": "159 Repair Blvd, Sampletown",
-    "phone": "555-0107",
+    "address": "404 Tech Repair Rd, Sampletown",
+    "phone": "555-333-4444",
     "website": "https://computech.example.com",
     "image": "computech.png",
-    "membershipLevel": 2,
-    "description": "Computer repair services."
+    "membershipLevel": 2
   }
 ]
