@@ -2,64 +2,64 @@
   {
     "name": "TechZone",
     "address": "123 Tech St, Sampletown",
-    "phone": "(555) 111-2222",
+    "phone": "555-111-2222",
     "website": "https://techzone.example.com",
     "image": "techzone.png",
     "membership": 3,
-    "description": "Leading tech solutions."
+    "description": "Leading tech solutions provider."
   },
   {
     "name": "Healthy Eats",
     "address": "456 Fresh Ave, Sampletown",
-    "phone": "(555) 333-4444",
+    "phone": "555-222-3333",
     "website": "https://healthyeats.example.com",
     "image": "healthyeats.png",
     "membership": 2,
-    "description": "Organic and healthy food."
+    "description": "Fresh and organic food options."
   },
   {
     "name": "Green Farm Market",
-    "address": "789 Green Rd, Sampletown",
-    "phone": "(555) 555-6666",
+    "address": "789 Green Road, Sampletown",
+    "phone": "555-333-4444",
     "website": "https://greenfarm.example.com",
     "image": "greenfarm.png",
     "membership": 1,
-    "description": "Fresh farm produce."
+    "description": "Local farm produce and goods."
   },
   {
     "name": "City Books",
     "address": "101 Book Ln, Sampletown",
-    "phone": "(555) 777-8888",
+    "phone": "555-444-5555",
     "website": "https://citybooks.example.com",
     "image": "citybooks.png",
     "membership": 2,
-    "description": "Your local bookstore."
+    "description": "Neighborhood bookstore with events."
   },
   {
     "name": "FitClub Gym",
     "address": "202 Fitness Blvd, Sampletown",
-    "phone": "(555) 999-0000",
+    "phone": "555-555-6666",
     "website": "https://fitclub.example.com",
     "image": "fitclub.png",
     "membership": 3,
-    "description": "Stay fit and healthy."
+    "description": "Gym, classes, and personal training."
   },
   {
     "name": "Ice Cream Land",
     "address": "303 Sweet St, Sampletown",
-    "phone": "(555) 123-4567",
+    "phone": "555-666-7777",
     "website": "https://icecreamland.example.com",
     "image": "icecreamland.png",
     "membership": 1,
-    "description": "Delicious ice cream."
+    "description": "desserts and treats galore."
   },
   {
     "name": "CompuTech Repair",
     "address": "404 Tech Repair Rd, Sampletown",
-    "phone": "(555) 234-5678",
+    "phone": "555-777-8888",
     "website": "https://computechrepair.example.com",
     "image": "computech.png",
     "membership": 2,
-    "description": "Computer repair specialists."
+    "description": "Repair and maintenance for all your tech."
   }
 ]
