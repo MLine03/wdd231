@@ -1,14 +1,14 @@
+/* Basic styling */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
-header, nav, footer {
+header {
   background-color: #003366;
-  color: white;
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -16,10 +16,21 @@ nav a {
   color: white;
   margin: 0 1rem;
   text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
   padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .view-toggle {
@@ -27,30 +38,109 @@ main {
   margin-bottom: 1rem;
 }
 
-button {
-  margin: 0 0.5rem;
+.view-toggle button {
   padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   cursor: pointer;
+  border: 1px solid #003366;
+  background-color: white;
+  color: #003366;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-.members.grid .member-card {
-  display: inline-block;
-  width: 300px;
+.view-toggle button:hover {
+  background-color: #003366;
+  color: white;
+}
+
+/* Members Grid */
+.members.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.member-card {
+  background-color: white;
   border: 1px solid #ccc;
-  margin: 1rem;
+  width: 300px;
   padding: 1rem;
-  vertical-align: top;
-}
-
-.members.list .member-card {
-  display: block;
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
 .member-card img {
-  max-width: 100px;
+  max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.member-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.member-card a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+/* Members List */
+.members.list {
+  display: block;
+}
+
+.members.list .member-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.members.list .member-card img {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.members.list .member-card h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .member-card {
+    width: 100%;
+  }
+  .members.list .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .members.list .member-card img {
+    width: 100%;
+  }
 }

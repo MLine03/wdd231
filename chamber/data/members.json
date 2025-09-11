@@ -1,58 +1,58 @@
 [
   {
     "name": "TechZone",
-    "address": "123 Tech Blvd, Sampletown",
-    "phone": "555-111-2222",
-    "website": "https://techzone.com",
+    "address": "123 Tech Street, Sampletown",
+    "phone": "555-123-4567",
+    "website": "https://www.techzone.com",
     "image": "techzone.png",
-    "membership": 3
+    "membershipLevel": 3
   },
   {
     "name": "Healthy Eats",
-    "address": "456 Fresh Rd, Sampletown",
-    "phone": "555-222-3333",
-    "website": "https://healthyeats.com",
+    "address": "456 Healthy Lane, Sampletown",
+    "phone": "555-234-5678",
+    "website": "https://www.healthyeats.com",
     "image": "healthyeats.png",
-    "membership": 1
+    "membershipLevel": 2
   },
   {
     "name": "Green Farm Market",
-    "address": "789 Greenway, Sampletown",
-    "phone": "555-333-4444",
-    "website": "https://greenfarm.com",
+    "address": "789 Green Road, Sampletown",
+    "phone": "555-345-6789",
+    "website": "https://www.greenfarmmarket.com",
     "image": "greenfarm.png",
-    "membership": 2
+    "membershipLevel": 1
   },
   {
     "name": "City Books",
-    "address": "321 Book Ln, Sampletown",
-    "phone": "555-444-5555",
-    "website": "https://citybooks.com",
+    "address": "101 City Plaza, Sampletown",
+    "phone": "555-456-7890",
+    "website": "https://www.citybooks.com",
     "image": "citybooks.png",
-    "membership": 1
+    "membershipLevel": 3
   },
   {
     "name": "FitClub Gym",
-    "address": "654 Muscle St, Sampletown",
-    "phone": "555-555-6666",
-    "website": "https://fitclub.com",
+    "address": "202 Fitness Blvd, Sampletown",
+    "phone": "555-567-8901",
+    "website": "https://www.fitclubgym.com",
     "image": "fitclub.png",
-    "membership": 2
+    "membershipLevel": 2
   },
   {
     "name": "Ice Cream Land",
-    "address": "987 Sweet Ave, Sampletown",
-    "phone": "555-666-7777",
-    "website": "https://icecreamland.com",
+    "address": "303 Sweet Treats Ave, Sampletown",
+    "phone": "555-678-9012",
+    "website": "https://www.icecreamland.com",
     "image": "icecreamland.png",
-    "membership": 1
+    "membershipLevel": 1
   },
   {
     "name": "CompuTech Repair",
-    "address": "159 Fixit Blvd, Sampletown",
-    "phone": "555-777-8888",
-    "website": "https://computechrepair.com",
+    "address": "404 Tech Repair St, Sampletown",
+    "phone": "555-789-0123",
+    "website": "https://www.computechrepair.com",
     "image": "computech.png",
-    "membership": 3
+    "membershipLevel": 3
   }
 ]
