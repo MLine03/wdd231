@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sampletown Chamber of Commerce Directory</title>
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce. Discover trusted local businesses." />
-  <meta name="author" content="Your Full Name" />
+  <meta charset="UTF-8">  <!-- Must be first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Facebook Open Graph -->
-  <meta property="og:title" content="Sampletown Chamber of Commerce" />
-  <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
-  <meta property="og:image" content="images/social-banner.jpg" />
-  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html" />
+  <title>Sampletown Chamber Directory</title>
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce">
+  <meta name="author" content="Your Full Name">
 
-  <link rel="icon" href="images/favicon.ico" />
+  <!-- Google Fonts preconnect and combined link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Normalize CSS -->
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles/styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Sampletown Chamber of Commerce">
+  <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
+  <meta property="og:image" content="images/social-banner.jpg">
+  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
-    <h1>Sampletown Chamber of Commerce Directory</h1>
+    <h1>Sampletown Chamber Directory</h1>
     <nav>
       <ul>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <div class="view-toggle">
-        <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-        <button id="listViewBtn" aria-pressed="false">List View</button>
-      </div>
-      <div id="membersContainer" class="grid-view"></div>
+    <!-- Layout toggle buttons -->
+    <div class="layout-toggle">
+      <button id="gridViewBtn" aria-label="Show grid view">Grid View</button>
+      <button id="listViewBtn" aria-label="Show list view">List View</button>
+    </div>
+
+    <!-- Member container -->
+    <section id="members" class="grid-view" aria-live="polite">
+      <!-- Member cards will be dynamically inserted here -->
     </section>
   </main>
 
   <footer>
-    <p>Contact us: info@sampletownchamber.com | (123) 456-7890</p>
-    <p>Full Name - WDD 231</p>
-    <p>© <span id="copyrightYear"></span> Sampletown Chamber of Commerce</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>Contact us: info@sampletownchamber.com | Phone: (555) 555-5555</p>
+    <p>Developed by Your Full Name | WDD 231 | Last modified: <span id="lastModified"></span> | &copy; <span id="currentYear"></span></p>
   </footer>
 
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>

@@ -2,50 +2,64 @@
   {
     "name": "TechZone",
     "address": "123 Tech St, Sampletown",
-    "phone": "555-1234",
+    "phone": "(555) 111-2222",
     "website": "https://techzone.example.com",
-    "logo": "images/techzone.png"
+    "image": "techzone.png",
+    "membership": 3,
+    "description": "Leading tech solutions."
   },
   {
     "name": "Healthy Eats",
-    "address": "456 Health Ave, Sampletown",
-    "phone": "555-5678",
+    "address": "456 Fresh Ave, Sampletown",
+    "phone": "(555) 333-4444",
     "website": "https://healthyeats.example.com",
-    "logo": "images/healthyeats.png"
+    "image": "healthyeats.png",
+    "membership": 2,
+    "description": "Organic and healthy food."
   },
   {
-    "name": "Green Farm",
+    "name": "Green Farm Market",
     "address": "789 Green Rd, Sampletown",
-    "phone": "555-8765",
+    "phone": "(555) 555-6666",
     "website": "https://greenfarm.example.com",
-    "logo": "images/greenfarm.png"
+    "image": "greenfarm.png",
+    "membership": 1,
+    "description": "Fresh farm produce."
   },
   {
     "name": "City Books",
-    "address": "321 Book Ln, Sampletown",
-    "phone": "555-4321",
+    "address": "101 Book Ln, Sampletown",
+    "phone": "(555) 777-8888",
     "website": "https://citybooks.example.com",
-    "logo": "images/citybooks.png"
+    "image": "citybooks.png",
+    "membership": 2,
+    "description": "Your local bookstore."
   },
   {
-    "name": "Fit Club",
-    "address": "654 Fitness Blvd, Sampletown",
-    "phone": "555-6789",
+    "name": "FitClub Gym",
+    "address": "202 Fitness Blvd, Sampletown",
+    "phone": "(555) 999-0000",
     "website": "https://fitclub.example.com",
-    "logo": "images/fitclub.png"
+    "image": "fitclub.png",
+    "membership": 3,
+    "description": "Stay fit and healthy."
   },
   {
     "name": "Ice Cream Land",
-    "address": "987 Sweet St, Sampletown",
-    "phone": "555-3456",
+    "address": "303 Sweet St, Sampletown",
+    "phone": "(555) 123-4567",
     "website": "https://icecreamland.example.com",
-    "logo": "images/icecreamland.png"
+    "image": "icecreamland.png",
+    "membership": 1,
+    "description": "Delicious ice cream."
   },
   {
-    "name": "CompuTech",
-    "address": "159 Computer Ct, Sampletown",
-    "phone": "555-2468",
-    "website": "https://computech.example.com",
-    "logo": "images/computech.png"
+    "name": "CompuTech Repair",
+    "address": "404 Tech Repair Rd, Sampletown",
+    "phone": "(555) 234-5678",
+    "website": "https://computechrepair.example.com",
+    "image": "computech.png",
+    "membership": 2,
+    "description": "Computer repair specialists."
   }
 ]
