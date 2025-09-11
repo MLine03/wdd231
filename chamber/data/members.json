@@ -1,0 +1,59 @@
+[
+    {
+      "name": "TechZone",
+      "address": "101 Tech Way",
+      "phone": "555-1234",
+      "website": "https://techzone.com",
+      "image": "techzone.png",
+      "membership": 3
+    },
+    {
+      "name": "Healthy Eats",
+      "address": "22 Wellness Blvd",
+      "phone": "555-5678",
+      "website": "https://healthyeats.com",
+      "image": "healthyeats.png",
+      "membership": 2
+    },
+    {
+      "name": "Green Farm Market",
+      "address": "400 Fresh Lane",
+      "phone": "555-8765",
+      "website": "https://greenfarm.com",
+      "image": "greenfarm.png",
+      "membership": 1
+    },
+    {
+      "name": "City Books",
+      "address": "78 Library St",
+      "phone": "555-1111",
+      "website": "https://citybooks.com",
+      "image": "citybooks.png",
+      "membership": 2
+    },
+    {
+      "name": "FitClub Gym",
+      "address": "19 Power Dr",
+      "phone": "555-2020",
+      "website": "https://fitclub.com",
+      "image": "fitclub.png",
+      "membership": 3
+    },
+    {
+      "name": "Ice Cream Land",
+      "address": "99 Sweet St",
+      "phone": "555-3333",
+      "website": "https://icecreamland.com",
+      "image": "icecreamland.png",
+      "membership": 1
+    },
+    {
+      "name": "CompuTech Repair",
+      "address": "12 Byte Blvd",
+      "phone": "555-9090",
+      "website": "https://computechrepair.com",
+      "image": "computech.png",
+      "membership": 2
+    }
+  ]
+  
