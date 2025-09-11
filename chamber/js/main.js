@@ -1,61 +1,63 @@
-const membersContainer = document.getElementById('members-container');
-const gridBtn = document.getElementById('grid');
-const listBtn = document.getElementById('list');
+const directory = document.getElementById('directory');
+const gridViewBtn = document.getElementById('gridViewBtn');
+const listViewBtn = document.getElementById('listViewBtn');
 
-async function getMembers() {
+async function fetchMembers() {
   try {
     const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Network response was not ok');
     const members = await response.json();
     displayMembers(members);
   } catch (error) {
-    membersContainer.innerHTML = `<p>Failed to load members: ${error.message}</p>`;
+    console.error('Error loading members:', error);
   }
 }
 
 function displayMembers(members) {
-  membersContainer.innerHTML = ''; // clear existing
+  directory.innerHTML = '';
 
   members.forEach(member => {
-    const card = document.createElement('article');
+    const card = document.createElement('div');
     card.className = 'member-card';
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" />
+      <img src="images/${member.image}" alt="${member.name} logo" />
       <h2>${member.name}</h2>
-      <p>${member.address}</p>
-      <p>Phone: <a href="tel:${member.phone}">${member.phone}</a></p>
-      <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
-      <p>Membership Level: ${membershipLevel(member.membershipLevel)}</p>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+      <p>${member.description}</p>
+      <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
     `;
 
-    membersContainer.appendChild(card);
+    directory.appendChild(card);
   });
 }
 
-function membershipLevel(level) {
-  switch(level) {
-    case 1: return 'Member';
-    case 2: return 'Silver';
-    case 3: return 'Gold';
-    default: return 'Member';
-  }
+function setGridView() {
+  directory.classList.remove('list');
+  directory.classList.add('grid');
+  gridViewBtn.setAttribute('aria-pressed', 'true');
+  listViewBtn.setAttribute('aria-pressed', 'false');
 }
 
-// Toggle grid/list view
-gridBtn.addEventListener('click', () => {
-  membersContainer.classList.add('grid');
-  membersContainer.classList.remove('list');
+function setListView() {
+  directory.classList.remove('grid');
+  directory.classList.add('list');
+  gridViewBtn.setAttribute('aria-pressed', 'false');
+  listViewBtn.setAttribute('aria-pressed', 'true');
+}
+
+gridViewBtn.addEventListener('click', () => {
+  setGridView();
 });
 
-listBtn.addEventListener('click', () => {
-  membersContainer.classList.add('list');
-  membersContainer.classList.remove('grid');
+listViewBtn.addEventListener('click', () => {
+  setListView();
 });
 
-// Footer dynamic year and last modified date
+// Display last modified date and current year
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initial load
-getMembers();
+fetchMembers();
+setGridView(); // default view
