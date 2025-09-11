@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sampletown Chamber Directory</title>
-    <meta name="description" content="Member directory for the Sampletown Chamber of Commerce" />
-    <meta name="author" content="Meline Levao" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sampletown Chamber Directory</title>
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce" />
+  <meta name="author" content="Meline Levao" />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Sampletown Chamber of Commerce" />
-    <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
-    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Sampletown+Chamber+Banner" />
-    <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html" />
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sampletown Chamber of Commerce" />
+  <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
+  <meta property="og:image" content="images/social-banner.jpg" />
+  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
 
-    <!-- Google Fonts: preconnect and single link for Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
-
 <body>
-    <header>
-        <h1>Sampletown Chamber Directory</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Sampletown Chamber Directory</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="view-toggle">
-            <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-            <button id="listViewBtn" aria-pressed="false">List View</button>
-        </section>
+  <main>
+    <section class="view-toggle" aria-label="Toggle member directory view">
+      <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+      <button id="listViewBtn" aria-pressed="false">List View</button>
+    </section>
 
-        <section id="members" class="grid-view">
-            <!-- Members will be dynamically loaded here -->
-        </section>
-    </main>
+    <section id="members" class="grid-view" aria-live="polite" aria-relevant="additions removals">
+      <!-- Members will load here -->
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | All rights reserved</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
 
-    <!-- JS Script -->
-    <script src="scripts/directory.js"></script>
+  <script src="scripts/directory.js"></script>
 </body>
 </html>

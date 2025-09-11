@@ -2,7 +2,6 @@ const membersSection = document.getElementById('members');
 const gridViewBtn = document.getElementById('gridViewBtn');
 const listViewBtn = document.getElementById('listViewBtn');
 
-// Fetch members data
 async function fetchMembers() {
   try {
     const response = await fetch('data/members.json');
@@ -20,10 +19,10 @@ function displayMembers(members) {
 
   members.forEach(member => {
     const card = document.createElement('div');
-    card.className = 'member-card';
+    card.className = 'card';
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="Logo of ${member.name}">
+      <img src="images/${member.image}" alt="Logo of ${member.name}" />
       <h2>${member.name}</h2>
       <p>${member.description}</p>
       <p><strong>Address:</strong> ${member.address}</p>
@@ -44,7 +43,6 @@ function membershipLevel(level) {
   }
 }
 
-// View toggles
 gridViewBtn.addEventListener('click', () => {
   membersSection.classList.add('grid-view');
   membersSection.classList.remove('list-view');
@@ -59,7 +57,7 @@ listViewBtn.addEventListener('click', () => {
   gridViewBtn.setAttribute('aria-pressed', 'false');
 });
 
-// Footer dynamic date
+// Footer dynamic dates
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
