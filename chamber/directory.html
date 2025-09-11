@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sampletown Chamber Directory</title>
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce" />
-  <meta name="author" content="Meline Levao" />
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce">
+  <meta name="author" content="Meline Levao">
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- Favorite Icon -->
+  <link rel="icon" href="images/favicon.ico">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Sampletown Chamber of Commerce" />
-  <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
-  <meta property="og:image" content="images/social-banner.jpg" />
-  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sampletown Chamber Commerce">
+  <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
+  <meta property="og:image" content="images/social-banner.jpg">
+  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html">
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Sampletown Chamber Directory</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="view-toggle" aria-label="Toggle member directory view">
-      <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-      <button id="listViewBtn" aria-pressed="false">List View</button>
-    </section>
+<header>
+  <h1>Sampletown Chamber Directory</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section id="members" class="grid-view" aria-live="polite" aria-relevant="additions removals">
-      <!-- Members will load here -->
-    </section>
-  </main>
+<main>
+  <!-- H1 is the first element here as required -->
 
-  <footer>
-    <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | All rights reserved</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
+  <!-- View Toggle Buttons -->
+  <div class="view-toggle" role="group" aria-label="Toggle directory view">
+    <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+    <button id="listViewBtn" aria-pressed="false">List View</button>
+  </div>
 
-  <script src="scripts/directory.js"></script>
+  <!-- Members Section -->
+  <section id="members" class="grid-view"></section>
+</main>
+
+<footer>
+  <p>© <span id="currentYear"></span> Meline Levao | All rights reserved</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script src="scripts/directory.js"></script>
 </body>
 </html>
