@@ -1,87 +1,83 @@
-/* Base styling */
+/* General Styles */
 body {
   font-family: 'Open Sans', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  margin: 0;
+  padding: 0 1rem;
 }
 
-header, footer {
+/* Header */
+header {
   background-color: #004080;
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0.5rem 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-nav a:hover,
-nav a:focus {
+nav a[aria-current="page"] {
   text-decoration: underline;
 }
 
-main {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-#view-toggle {
+/* View Toggle Buttons */
+.view-toggle {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
-#view-toggle button {
+.view-toggle button {
   background-color: #004080;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.25rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
 }
 
-#view-toggle button[aria-pressed="true"] {
-  background-color: #0073e6;
-  font-weight: bold;
+.view-toggle button[aria-pressed="true"] {
+  background-color: #0066cc;
 }
 
-#members {
+/* Members Container Grid & List */
+#membersContainer.grid-view {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
-/* Grid view styling */
-.grid-view {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* List view styling */
-.list-view {
+#membersContainer.list-view {
   display: block;
 }
 
-/* Member card style */
+/* Member Card Styles */
 .member-card {
   background-color: white;
-  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,25 +85,65 @@ main {
 }
 
 .member-card img {
-  max-width: 100%;
+  max-width: 120px;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
 }
 
-.member-card h2 {
+.member-card h3 {
+  margin: 0.5rem 0;
   font-size: 1.25rem;
-  margin: 0 0 0.5rem 0;
+  color: #004080;
 }
 
 .member-card p {
   margin: 0.25rem 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
+.member-card a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.member-card a:hover,
+.member-card a:focus {
+  text-decoration: underline;
+}
+
+/* List view styles */
+#membersContainer.list-view .member-card {
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+#membersContainer.list-view .member-card img {
+  margin-right: 1rem;
+  max-width: 80px;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
   nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 }

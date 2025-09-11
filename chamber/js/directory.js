@@ -1,43 +1,63 @@
-const membersContainer = document.getElementById("members-container");
-const gridButton = document.getElementById("grid");
-const listButton = document.getElementById("list");
+const membersContainer = document.getElementById('membersContainer');
+const gridViewBtn = document.getElementById('gridViewBtn');
+const listViewBtn = document.getElementById('listViewBtn');
 
-// Fetch and display members
-async function getMembers() {
-  const response = await fetch("data/members.json");
-  const members = await response.json();
-  displayMembers(members);
+async function fetchMembers() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error('Network response was not ok');
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    membersContainer.textContent = 'Failed to load member data.';
+    console.error('Fetch error:', error);
+  }
 }
 
 function displayMembers(members) {
-  membersContainer.innerHTML = "";
+  membersContainer.innerHTML = ''; // clear previous
   members.forEach(member => {
-    const card = document.createElement("section");
-    card.classList.add("member-card");
+    const card = document.createElement('div');
+    card.className = 'member-card';
+
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
+      <img src="${member.logo}" alt="Logo of ${member.name}" loading="lazy" />
       <h3>${member.name}</h3>
       <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+      <p>Phone: ${member.phone}</p>
+      <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
     `;
+
     membersContainer.appendChild(card);
   });
 }
 
-// Toggle view
-gridButton.addEventListener("click", () => {
-  membersContainer.classList.add("grid");
-  membersContainer.classList.remove("list");
+function setGridView() {
+  membersContainer.classList.add('grid-view');
+  membersContainer.classList.remove('list-view');
+  gridViewBtn.setAttribute('aria-pressed', 'true');
+  listViewBtn.setAttribute('aria-pressed', 'false');
+}
+
+function setListView() {
+  membersContainer.classList.add('list-view');
+  membersContainer.classList.remove('grid-view');
+  listViewBtn.setAttribute('aria-pressed', 'true');
+  gridViewBtn.setAttribute('aria-pressed', 'false');
+}
+
+gridViewBtn.addEventListener('click', () => {
+  setGridView();
 });
 
-listButton.addEventListener("click", () => {
-  membersContainer.classList.add("list");
-  membersContainer.classList.remove("grid");
+listViewBtn.addEventListener('click', () => {
+  setListView();
 });
 
-// Footer date
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+// Set default view and load data
+setGridView();
+fetchMembers();
 
-getMembers();
+// Footer dynamic date info
+document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;

@@ -2,57 +2,50 @@
   {
     "name": "TechZone",
     "address": "123 Tech St, Sampletown",
-    "phone": "555-101-2020",
+    "phone": "555-1234",
     "website": "https://techzone.example.com",
-    "image": "techzone.png",
-    "membershipLevel": 3
+    "logo": "images/techzone.png"
   },
   {
     "name": "Healthy Eats",
-    "address": "456 Green Rd, Sampletown",
-    "phone": "555-303-4040",
+    "address": "456 Health Ave, Sampletown",
+    "phone": "555-5678",
     "website": "https://healthyeats.example.com",
-    "image": "healthyeats.png",
-    "membershipLevel": 2
+    "logo": "images/healthyeats.png"
   },
   {
-    "name": "Green Farm Market",
-    "address": "789 Farm Lane, Sampletown",
-    "phone": "555-505-6060",
-    "website": "https://greenfarmmarket.example.com",
-    "image": "greenfarm.png",
-    "membershipLevel": 1
+    "name": "Green Farm",
+    "address": "789 Green Rd, Sampletown",
+    "phone": "555-8765",
+    "website": "https://greenfarm.example.com",
+    "logo": "images/greenfarm.png"
   },
   {
     "name": "City Books",
-    "address": "101 Book Blvd, Sampletown",
-    "phone": "555-707-8080",
+    "address": "321 Book Ln, Sampletown",
+    "phone": "555-4321",
     "website": "https://citybooks.example.com",
-    "image": "citybooks.png",
-    "membershipLevel": 2
+    "logo": "images/citybooks.png"
   },
   {
-    "name": "FitClub Gym",
-    "address": "202 Fitness Ave, Sampletown",
-    "phone": "555-909-1010",
+    "name": "Fit Club",
+    "address": "654 Fitness Blvd, Sampletown",
+    "phone": "555-6789",
     "website": "https://fitclub.example.com",
-    "image": "fitclub.png",
-    "membershipLevel": 3
+    "logo": "images/fitclub.png"
   },
   {
     "name": "Ice Cream Land",
-    "address": "303 Sweet St, Sampletown",
-    "phone": "555-111-2222",
+    "address": "987 Sweet St, Sampletown",
+    "phone": "555-3456",
     "website": "https://icecreamland.example.com",
-    "image": "icecreamland.png",
-    "membershipLevel": 1
+    "logo": "images/icecreamland.png"
   },
   {
-    "name": "CompuTech Repair",
-    "address": "404 Tech Repair Rd, Sampletown",
-    "phone": "555-333-4444",
+    "name": "CompuTech",
+    "address": "159 Computer Ct, Sampletown",
+    "phone": "555-2468",
     "website": "https://computech.example.com",
-    "image": "computech.png",
-    "membershipLevel": 2
+    "logo": "images/computech.png"
   }
 ]

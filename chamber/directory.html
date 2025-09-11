@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sampletown Chamber of Commerce Directory</title>
   <meta name="description" content="Member directory for the Sampletown Chamber of Commerce. Discover trusted local businesses." />
   <meta name="author" content="Your Full Name" />
@@ -17,47 +17,44 @@
 
   <!-- Normalize CSS -->
   <link rel="stylesheet" href="styles/normalize.css" />
-
-  <!-- Main styles -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="styles/styles.css" />
 
-  <!-- Google Fonts preconnect and link -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h2>Sampletown Chamber of Commerce</h2>
+    <h1>Sampletown Chamber of Commerce Directory</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Sampletown Chamber of Commerce Directory</h1>
-
     <section>
-      <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-      <button id="listViewBtn" aria-pressed="false">List View</button>
-    </section>
-
-    <section id="membersList" class="grid-view" aria-live="polite">
-      <!-- Member cards will be injected here by JavaScript -->
+      <div class="view-toggle">
+        <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+        <button id="listViewBtn" aria-pressed="false">List View</button>
+      </div>
+      <div id="membersContainer" class="grid-view"></div>
     </section>
   </main>
 
   <footer>
-    <p>Contact: info@sampletownchamber.com | Phone: (555) 123-4567</p>
-    <p>Your Full Name | WDD 231</p>
-    <p>&copy; <span id="copyrightYear"></span></p>
+    <p>Contact us: info@sampletownchamber.com | (123) 456-7890</p>
+    <p>Full Name - WDD 231</p>
+    <p>© <span id="copyrightYear"></span> Sampletown Chamber of Commerce</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/directory.js"></script>
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
