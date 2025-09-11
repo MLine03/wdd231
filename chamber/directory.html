@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce" />
-  <meta name="author" content="Your Full Name" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce">
+  <meta name="author" content="Your Full Name">
 
-  <!-- Facebook Open Graph Meta -->
+  <title>Sampletown Chamber Directory</title>
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook Meta Tags -->
   <meta property="og:title" content="Sampletown Chamber of Commerce">
   <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
   <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/social-banner.jpg">
   <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
 
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <title>Sampletown Chamber Directory</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
     <h1>Sampletown Chamber of Commerce</h1>
     <nav>
-      <button id="menu-toggle">☰</button>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
     <section class="view-toggle">
-      <button id="grid-view">Grid View</button>
-      <button id="list-view">List View</button>
+      <button id="grid">Grid View</button>
+      <button id="list">List View</button>
     </section>
-    <section id="members" class="grid-view"></section>
+    <section class="members" id="members-container">
+      <!-- JS will inject member cards here -->
+    </section>
   </main>
 
   <footer>
-    <p>Contact: info@sampletownchamber.org</p>
-    <p>&copy; <span id="year"></span> | Your Full Name | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    <p>Contact us: info@sampletownchamber.com | 555-123-4567</p>
+    <p>&copy; <span id="year"></span> Sampletown Chamber | <span id="lastModified"></span></p>
+    <p>Student: Your Full Name | Course: WDD 231</p>
   </footer>
 
-  <script src="js/scripts.js" defer></script>
+  <script src="scripts/directory.js"></script>
 </body>
 </html>
