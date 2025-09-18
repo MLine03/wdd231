@@ -1,23 +1,27 @@
 [
   {
-    "name": "Acme Corp",
-    "address": "123 Main St, Sampletown",
+    "name": "Alpha Tech",
+    "address": "123 Tech Rd, Sampletown",
     "phone": "555-123-4567",
-    "website": "https://acmecorp.com",
+    "website": "https://alphatech.com",
+    "image": "alpha-logo.png",
     "membershipLevel": 3
   },
   {
-    "name": "Brightside Bakery",
-    "address": "456 Baker St, Sampletown",
+    "name": "Beta Solutions",
+    "address": "456 Beta Ave, Sampletown",
     "phone": "555-987-6543",
-    "website": "https://brightsidebakery.com",
+    "website": "https://betasolutions.com",
+    "image": "beta-logo.png",
     "membershipLevel": 2
   },
   {
-    "name": "CleanTech Solutions",
-    "address": "789 Green Rd, Sampletown",
-    "phone": "555-555-1234",
-    "website": "https://cleantechsolutions.com",
+    "name": "Gamma Supplies",
+    "address": "789 Gamma Blvd, Sampletown",
+    "phone": "555-234-5678",
+    "website": "https://gammasupplies.com",
+    "image": "gamma-logo.png",
     "membershipLevel": 1
   }
 ]
+
