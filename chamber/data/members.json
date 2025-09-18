@@ -1,20 +1,58 @@
 [
   {
-    "name": "Sample Business",
-    "image": "samplebusiness.png",
-    "description": "Leading business in Sampletown.",
-    "address": "123 Main St, Sampletown",
+    "name": "Sampletown Bakery",
+    "address": "123 Bread St, Sampletown, ST 12345",
     "phone": "555-123-4567",
-    "website": "https://www.samplebusiness.com",
-    "membership": 3
+    "website": "https://sampletownbakery.com",
+    "logo": "bakery-logo.png",
+    "membership": "Gold"
   },
   {
-    "name": "Another Business",
-    "image": "another.png",
-    "description": "Another local business.",
-    "address": "456 Elm St, Sampletown",
-    "phone": "555-987-6543",
-    "website": "https://www.anotherbusiness.com",
-    "membership": 2
+    "name": "Greenfield Gardens",
+    "address": "456 Green Rd, Sampletown, ST 12345",
+    "phone": "555-234-5678",
+    "website": "https://greenfieldgardens.com",
+    "logo": "greenfield-logo.png",
+    "membership": "Silver"
+  },
+  {
+    "name": "Tech Solutions",
+    "address": "789 Tech Ave, Sampletown, ST 12345",
+    "phone": "555-345-6789",
+    "website": "https://techsolutions.com",
+    "logo": "techsolutions-logo.png",
+    "membership": "Gold"
+  },
+  {
+    "name": "Ocean View Travel",
+    "address": "321 Shoreline Blvd, Sampletown, ST 12345",
+    "phone": "555-456-7890",
+    "website": "https://oceanviewtravel.com",
+    "logo": "oceanview-logo.png",
+    "membership": "Member"
+  },
+  {
+    "name": "Healthy Living Pharmacy",
+    "address": "654 Wellness Dr, Sampletown, ST 12345",
+    "phone": "555-567-8901",
+    "website": "https://healthylivingpharmacy.com",
+    "logo": "pharmacy-logo.png",
+    "membership": "Silver"
+  },
+  {
+    "name": "City Lights Bookstore",
+    "address": "987 Book Ln, Sampletown, ST 12345",
+    "phone": "555-678-9012",
+    "website": "https://citylightsbooks.com",
+    "logo": "citylights-logo.png",
+    "membership": "Member"
+  },
+  {
+    "name": "Sunset Gym",
+    "address": "135 Fitness Way, Sampletown, ST 12345",
+    "phone": "555-789-0123",
+    "website": "https://sunsetgym.com",
+    "logo": "sunsetgym-logo.png",
+    "membership": "Gold"
   }
 ]

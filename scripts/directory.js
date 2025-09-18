@@ -1,66 +1,82 @@
 const membersSection = document.getElementById('members');
-const gridViewBtn = document.getElementById('gridViewBtn');
-const listViewBtn = document.getElementById('listViewBtn');
+const gridBtn = document.getElementById('gridViewBtn');
+const listBtn = document.getElementById('listViewBtn');
 
-// Fetch members data
+// Fetch members.json and display 2-3 random Gold/Silver members as spotlight cards
 async function fetchMembers() {
   try {
     const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Network response was not ok');
+    if (!response.ok) throw new Error('Failed to load members data');
     const members = await response.json();
-    displayMembers(members);
+
+    // Filter for gold and silver members
+    const spotlightMembers = members.filter(m => m.membership.toLowerCase() === 'gold' || m.membership.toLowerCase() === 'silver');
+
+    // Randomly select 3 members or fewer if less than 3 available
+    const selectedMembers = getRandomSubset(spotlightMembers, 3);
+
+    displayMembers(selectedMembers);
   } catch (error) {
-    membersSection.innerHTML = '<p>Failed to load member data.</p>';
     console.error(error);
+    membersSection.textContent = 'Sorry, unable to load members at this time.';
   }
 }
 
+// Helper function to pick random subset of members
+function getRandomSubset(arr, n) {
+  const shuffled = arr.slice().sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
+// Display members in cards or list format based on view
 function displayMembers(members) {
-  membersSection.innerHTML = ''; // clear contents
+  membersSection.innerHTML = '';
 
   members.forEach(member => {
-    const card = document.createElement('div');
-    card.className = 'member-card';
+    const card = document.createElement('article');
+    card.classList.add('member-card');
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="Logo of ${member.name}">
-      <h2>${member.name}</h2>
-      <p>${member.description}</p>
-      <p><strong>Address:</strong> ${member.address}</p>
-      <p><strong>Phone:</strong> <a href="tel:${member.phone.replace(/\D/g, '')}">${member.phone}</a></p>
-      <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
-      <p><strong>Membership Level:</strong> ${membershipLevel(member.membership)}</p>
+      <img src="images/${member.logo}" alt="${member.name} logo" loading="lazy" />
+      <div class="member-info">
+        <h3>${member.name}</h3>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><strong>Phone:</strong> <a href="tel:${member.phone.replace(/[^0-9]/g, '')}">${member.phone}</a></p>
+        <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+        <p><strong>Membership Level:</strong> ${member.membership}</p>
+      </div>
     `;
 
     membersSection.appendChild(card);
   });
 }
 
-function membershipLevel(level) {
-  switch(level) {
-    case 3: return 'Gold';
-    case 2: return 'Silver';
-    default: return 'Member';
-  }
-}
-
-// View toggles
-gridViewBtn.addEventListener('click', () => {
+function setGridView() {
   membersSection.classList.add('grid-view');
   membersSection.classList.remove('list-view');
-  gridViewBtn.setAttribute('aria-pressed', 'true');
-  listViewBtn.setAttribute('aria-pressed', 'false');
-});
+  gridBtn.setAttribute('aria-pressed', 'true');
+  listBtn.setAttribute('aria-pressed', 'false');
+}
 
-listViewBtn.addEventListener('click', () => {
+function setListView() {
   membersSection.classList.add('list-view');
   membersSection.classList.remove('grid-view');
-  listViewBtn.setAttribute('aria-pressed', 'true');
-  gridViewBtn.setAttribute('aria-pressed', 'false');
+  gridBtn.setAttribute('aria-pressed', 'false');
+  listBtn.setAttribute('aria-pressed', 'true');
+}
+
+gridBtn.addEventListener('click', () => {
+  setGridView();
 });
 
-// Footer dynamic date
+listBtn.addEventListener('click', () => {
+  setListView();
+});
+
+// Set current year and last modified date in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
+// Initialize page
 fetchMembers();
+setGridView();

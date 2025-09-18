@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Sampletown Chamber Directory</title>
-  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce, featuring trusted local businesses.">
-  <meta name="author" content="Meline Levao">
+  <title>Sampletown Chamber of Commerce - Member Directory</title>
+  <meta name="description" content="Browse trusted local businesses in Sampletown through our Chamber of Commerce member directory." />
+  <meta name="author" content="Meline Levao" />
 
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Sampletown Chamber of Commerce">
-  <meta property="og:description" content="Explore trusted local businesses in Sampletown.">
-  <meta property="og:image" content="images/social-banner.jpg">
-  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html">
+  <meta property="og:title" content="Sampletown Chamber of Commerce" />
+  <meta property="og:description" content="Explore trusted local businesses in Sampletown." />
+  <meta property="og:image" content="images/social-banner.jpg" />
+  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/directory.html" />
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico" />
 
   <!-- Google Fonts preconnect and stylesheet -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
 
@@ -40,19 +40,21 @@
 </header>
 
 <main>
-  <h1>Sampletown Chamber Directory</h1>
+  <h1>Sampletown Chamber of Commerce Member Directory</h1>
 
-  <!-- Member listing and toggle buttons go here -->
-  <section id="members" class="grid-view" aria-label="Member directory list/grid"></section>
+  <section id="members" class="grid-view" aria-label="Member directory list or grid view"></section>
 
   <div class="view-toggle" role="group" aria-label="Toggle directory view">
-    <button id="gridViewBtn" aria-pressed="true">Grid View</button>
-    <button id="listViewBtn" aria-pressed="false">List View</button>
+    <button id="gridViewBtn" aria-pressed="true" aria-label="Grid view of members">Grid View</button>
+    <button id="listViewBtn" aria-pressed="false" aria-label="List view of members">List View</button>
   </div>
 </main>
 
 <footer>
-  <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
+  <p>
+    &copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated:
+    <span id="lastModified"></span>
+  </p>
 </footer>
 
 <script src="scripts/directory.js"></script>
