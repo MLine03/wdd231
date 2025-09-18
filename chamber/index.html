@@ -2,20 +2,20 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sampletown Chamber Home - Welcome to Local Business Community</title>
+  <title>Sampletown Chamber Home</title>
   <meta name="description" content="Welcome to Sampletown Chamber of Commerce. Join us and discover local business events and highlights.">
   <meta name="author" content="Meline Levao">
 
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Sampletown Chamber Home">
+  <meta property="og:title" content="Sampletown Chamber of Commerce">
   <meta property="og:description" content="Join Sampletown Chamber of Commerce and explore local businesses and events.">
   <meta property="og:image" content="images/social-banner.jpg">
   <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/index.html">
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico">
 
   <!-- Google Fonts preconnect and stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,40 +42,36 @@
 <main>
   <h1>Welcome to the Sampletown Chamber of Commerce</h1>
 
-  <!-- Hero Image -->
+  <!-- Hero Section -->
   <section class="hero">
-    <img src="images/hero-image.jpg" alt="Downtown Sampletown, community event happening" />
+    <img src="images/hero.jpg" alt="Scenic view of Sampletown" />
+    <p>Your gateway to trusted local businesses and community events.</p>
+    <a href="join.html" class="cta-button" title="Join the Chamber of Commerce">Join the Chamber</a>
   </section>
 
-  <!-- Call to Action -->
-  <section class="call-to-action">
-    <p>Join the Sampletown Chamber of Commerce to support local businesses and community growth.</p>
-    <a href="join.html" class="btn">Join Now</a>
-  </section>
-
-  <!-- Current Events Section -->
-  <section class="events" aria-label="Current events in Sampletown">
-    <h2>Upcoming Events</h2>
+  <!-- Current Events -->
+  <section class="events" aria-label="Current events">
+    <h2>Current Events</h2>
     <ul>
-      <li>Community Picnic - October 15</li>
-      <li>Small Business Expo - November 5</li>
-      <li>Holiday Parade - December 12</li>
+      <li>Annual Business Expo - October 10</li>
+      <li>Local Food Festival - November 15</li>
+      <li>Holiday Parade - December 5</li>
     </ul>
   </section>
 
   <!-- Weather Section -->
-  <section class="weather" aria-label="Sampletown weather forecast">
-    <h2>Current Weather</h2>
-    <div id="weather-container">
-      <!-- Weather data populated by JS -->
+  <section class="weather" aria-label="Current weather and forecast">
+    <h2>Weather</h2>
+    <div id="weatherData">
+      <!-- JavaScript will populate this -->
     </div>
   </section>
 
   <!-- Spotlight Section -->
-  <section class="spotlights" aria-label="Member spotlights">
+  <section class="spotlights" aria-label="Featured member businesses">
     <h2>Member Spotlights</h2>
-    <div id="spotlight-container">
-      <!-- Spotlight member cards populated by JS -->
+    <div id="spotlights">
+      <!-- JavaScript will populate this -->
     </div>
   </section>
 </main>
@@ -85,7 +81,14 @@
 </footer>
 
 <script src="scripts/home.js"></script>
+<script src="scripts/spotlights.js"></script>
+<script src="scripts/weather.js"></script>
+
+<script>
+  // Set current year and last modified date dynamically
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
+</script>
 
 </body>
 </html>
-
