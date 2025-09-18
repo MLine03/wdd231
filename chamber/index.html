@@ -4,77 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sampletown Chamber Home</title>
-  <meta name="description" content="Welcome to Sampletown Chamber of Commerce. Join us and discover local business events and highlights." />
-  <meta name="author" content="Your Name" />
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sampletown Chamber of Commerce" />
-  <meta property="og:description" content="Join Sampletown Chamber of Commerce and explore local businesses and events." />
-  <meta property="og:image" content="images/social-banner.jpg" />
-  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/index.html" />
-  
-  <link rel="icon" href="images/favicon.ico" />
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
   <header>
-    <h2>Sampletown Chamber of Commerce</h2>
+    <h1>Sampletown Chamber of Commerce</h1>
     <nav>
       <ul>
-        <li><a href="index.html" title="Home page">Home</a></li>
-        <li><a href="directory.html" title="Member directory">Directory</a></li>
-        <li><a href="contact.html" title="Contact us">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <!-- Hero Section -->
     <section class="hero">
-      <img src="images/hero.jpg" alt="Sampletown cityscape" />
-      <div class="hero-content">
-        <h1>Welcome to the Sampletown Chamber of Commerce</h1>
-        <p>Connecting local businesses and the community.</p>
-        <a href="join.html" class="cta-button" title="Join the Chamber of Commerce">Join the Chamber</a>
-      </div>
+      <img src="images/hero.jpg" alt="Welcome to Sampletown Chamber of Commerce" />
+      <h2>Welcome to Sampletown Chamber</h2>
+      <p>Your gateway to trusted local businesses and community events.</p>
+      <a href="join.html" class="cta-button">Join the Chamber</a>
     </section>
-    
-    <!-- Current Events Section -->
+
     <section class="current-events">
       <h2>Current Events</h2>
-      <ul>
-        <li>Annual Business Expo - October 10</li>
-        <li>Networking Breakfast - October 15</li>
-        <li>Community Clean-up Day - October 25</li>
-      </ul>
+      <p>Stay tuned for upcoming community events and news.</p>
     </section>
-    
-    <!-- Weather Section -->
-    <section class="weather" aria-label="Local weather forecast">
-      <h2>Weather in Sampletown</h2>
-      <div id="weather-current"></div>
-      <div id="weather-forecast"></div>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <div id="weather"></div>
     </section>
-    
-    <!-- Spotlight Members -->
+
     <section class="spotlights">
       <h2>Member Spotlights</h2>
-      <div id="spotlight-cards" class="grid-view" aria-live="polite" aria-atomic="true"></div>
+      <div id="spotlights"></div>
     </section>
   </main>
-  
+
   <footer>
     <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/index.js"></script>
+  <script src="scripts/home.js"></script>
 </body>
 </html>
+
