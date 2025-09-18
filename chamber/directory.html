@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Sampletown Chamber of Commerce - Member Directory</title>
-  <meta name="description" content="Browse trusted local businesses in Sampletown through our Chamber of Commerce member directory." />
+  <title>Sampletown Chamber Directory</title>
+  <meta name="description" content="Member directory for the Sampletown Chamber of Commerce, featuring trusted local businesses." />
   <meta name="author" content="Meline Levao" />
 
   <!-- Open Graph / Social Sharing -->
@@ -17,7 +17,7 @@
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" />
 
-  <!-- Google Fonts preconnect and stylesheet -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -27,37 +27,36 @@
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
+  <header>
+    <h2>Sampletown Chamber of Commerce</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Home page">Home</a></li>
+        <li><a href="directory.html" title="Member directory">Directory</a></li>
+        <li><a href="contact.html" title="Contact us">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h2>Sampletown Chamber of Commerce</h2>
-  <nav>
-    <ul>
-      <li><a href="index.html" title="Home page">Home</a></li>
-      <li><a href="directory.html" title="Member directory">Directory</a></li>
-      <li><a href="contact.html" title="Contact us">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <h1>Sampletown Chamber Directory</h1>
 
-<main>
-  <h1>Sampletown Chamber of Commerce Member Directory</h1>
+    <!-- Member listing and toggle buttons -->
+    <section id="members" class="grid-view" aria-label="Member directory list/grid"></section>
 
-  <section id="members" class="grid-view" aria-label="Member directory list or grid view"></section>
+    <div class="view-toggle" role="group" aria-label="Toggle directory view">
+      <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+      <button id="listViewBtn" aria-pressed="false">List View</button>
+    </div>
+  </main>
 
-  <div class="view-toggle" role="group" aria-label="Toggle directory view">
-    <button id="gridViewBtn" aria-pressed="true" aria-label="Grid view of members">Grid View</button>
-    <button id="listViewBtn" aria-pressed="false" aria-label="List view of members">List View</button>
-  </div>
-</main>
+  <footer>
+    <p>
+      &copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated:
+      <span id="lastModified"></span>
+    </p>
+  </footer>
 
-<footer>
-  <p>
-    &copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated:
-    <span id="lastModified"></span>
-  </p>
-</footer>
-
-<script src="scripts/directory.js"></script>
-
+  <script src="scripts/directory.js"></script>
 </body>
 </html>
