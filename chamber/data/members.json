@@ -1,27 +1,67 @@
 [
   {
-    "name": "Alpha Tech",
-    "address": "123 Tech Rd, Sampletown",
-    "phone": "555-123-4567",
-    "website": "https://alphatech.com",
-    "image": "alpha-logo.png",
-    "membershipLevel": 3
+    "name": "Alpha Electronics",
+    "address": "123 Main St, Sampletown, ST 12345",
+    "phone": "(555) 123-4567",
+    "website": "https://alpha-electronics.example.com",
+    "image": "images/alpha-logo.png",
+    "membershipLevel": 3,
+    "description": "Leading supplier of electronic components."
   },
   {
-    "name": "Beta Solutions",
-    "address": "456 Beta Ave, Sampletown",
-    "phone": "555-987-6543",
-    "website": "https://betasolutions.com",
-    "image": "beta-logo.png",
-    "membershipLevel": 2
+    "name": "Beta Books",
+    "address": "456 Oak St, Sampletown, ST 12345",
+    "phone": "(555) 987-6543",
+    "website": "https://beta-books.example.com",
+    "image": "images/beta-logo.png",
+    "membershipLevel": 2,
+    "description": "Your neighborhood bookstore."
   },
   {
-    "name": "Gamma Supplies",
-    "address": "789 Gamma Blvd, Sampletown",
-    "phone": "555-234-5678",
-    "website": "https://gammasupplies.com",
-    "image": "gamma-logo.png",
-    "membershipLevel": 1
+    "name": "Gamma Gardens",
+    "address": "789 Pine St, Sampletown, ST 12345",
+    "phone": "(555) 222-3333",
+    "website": "https://gamma-gardens.example.com",
+    "image": "images/gamma-logo.png",
+    "membershipLevel": 1,
+    "description": "Beautiful garden supplies and services."
+  },
+  {
+    "name": "Delta Designs",
+    "address": "135 Maple Ave, Sampletown, ST 12345",
+    "phone": "(555) 444-5555",
+    "website": "https://delta-designs.example.com",
+    "image": "images/delta-logo.png",
+    "membershipLevel": 3,
+    "description": "Innovative design and branding solutions."
+  },
+  {
+    "name": "Epsilon Eats",
+    "address": "246 Birch Rd, Sampletown, ST 12345",
+    "phone": "(555) 666-7777",
+    "website": "https://epsilon-eats.example.com",
+    "image": "images/epsilon-logo.png",
+    "membershipLevel": 2,
+    "description": "Local favorite for delicious meals."
+  },
+  {
+    "name": "Zeta Zoo",
+    "address": "357 Cedar Blvd, Sampletown, ST 12345",
+    "phone": "(555) 888-9999",
+    "website": "https://zeta-zoo.example.com",
+    "image": "images/zeta-logo.png",
+    "membershipLevel": 1,
+    "description": "Fun for the whole family."
+  },
+  {
+    "name": "Eta Electronics",
+    "address": "468 Spruce St, Sampletown, ST 12345",
+    "phone": "(555) 101-2020",
+    "website": "https://eta-electronics.example.com",
+    "image": "images/eta-logo.png",
+    "membershipLevel": 3,
+    "description": "Top-tier electronics and gadgets."
   }
 ]
+
 

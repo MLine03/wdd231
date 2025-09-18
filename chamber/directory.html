@@ -41,22 +41,21 @@
   <main>
     <h1>Sampletown Chamber Directory</h1>
 
-    <!-- Member listing and toggle buttons -->
-    <section id="members" class="grid-view" aria-label="Member directory list/grid"></section>
-
     <div class="view-toggle" role="group" aria-label="Toggle directory view">
       <button id="gridViewBtn" aria-pressed="true">Grid View</button>
       <button id="listViewBtn" aria-pressed="false">List View</button>
     </div>
+
+    <section id="members" class="grid-view" aria-label="Member directory list/grid">
+      <!-- Members loaded dynamically here -->
+    </section>
   </main>
 
   <footer>
-    <p>
-      &copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated:
-      <span id="lastModified"></span>
-    </p>
+    <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
   </footer>
 
   <script src="scripts/directory.js"></script>
 </body>
 </html>
+

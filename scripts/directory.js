@@ -1,57 +1,71 @@
-const membersSection = document.getElementById('members');
+const membersUrl = "data/members.json";
 
-// Fetch members data and display
+const membersSection = document.getElementById("members");
+const gridViewBtn = document.getElementById("gridViewBtn");
+const listViewBtn = document.getElementById("listViewBtn");
+
+// Fetch and display members
 async function getMembers() {
   try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
+    const response = await fetch(membersUrl);
     const members = await response.json();
-
     displayMembers(members);
   } catch (error) {
-    console.error('Fetch error:', error);
+    console.error("Failed to fetch members data:", error);
   }
 }
 
 function displayMembers(members) {
-  membersSection.innerHTML = ''; // Clear existing content
+  membersSection.innerHTML = "";
 
-  members.forEach(member => {
-    const card = document.createElement('div');
-    card.classList.add('member-card');
+  members.forEach((member) => {
+    const card = document.createElement("section");
+    card.classList.add("member-card");
 
     card.innerHTML = `
+      <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy" />
       <h3>${member.name}</h3>
-      <p>Phone: ${member.phone}</p>
-      <p>Address: ${member.address}</p>
-      <p>
-        Website: <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Site</a>
-      </p>
-      <p>Membership Level: ${membershipLevelToString(member.membershipLevel)}</p>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+      <p><strong>Membership Level:</strong> ${membershipLevelText(member.membershipLevel)}</p>
+      <p>${member.description}</p>
     `;
 
     membersSection.appendChild(card);
   });
 }
 
-function membershipLevelToString(level) {
+function membershipLevelText(level) {
   switch (level) {
     case 3:
-      return 'Gold';
+      return "Gold";
     case 2:
-      return 'Silver';
+      return "Silver";
     case 1:
-      return 'Member';
+      return "Bronze";
     default:
-      return 'Member';
+      return "Member";
   }
 }
 
-// Initialize current year and last modified date
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+// View toggles
+gridViewBtn.addEventListener("click", () => {
+  membersSection.classList.add("grid-view");
+  membersSection.classList.remove("list-view");
+  gridViewBtn.setAttribute("aria-pressed", "true");
+  listViewBtn.setAttribute("aria-pressed", "false");
+});
 
-// Call the function to fetch and display members
-getMembers();
+listViewBtn.addEventListener("click", () => {
+  membersSection.classList.add("list-view");
+  membersSection.classList.remove("grid-view");
+  gridViewBtn.setAttribute("aria-pressed", "false");
+  listViewBtn.setAttribute("aria-pressed", "true");
+});
+
+window.onload = () => {
+  getMembers();
+  // Default view is grid view
+  membersSection.classList.add("grid-view");
+};
