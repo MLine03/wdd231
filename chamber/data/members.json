@@ -1,67 +1,58 @@
 [
   {
-    "name": "Alpha Electronics",
-    "address": "123 Main St, Sampletown, ST 12345",
-    "phone": "(555) 123-4567",
-    "website": "https://alpha-electronics.example.com",
-    "image": "images/alpha-logo.png",
-    "membershipLevel": 3,
-    "description": "Leading supplier of electronic components."
+    "name": "Sunrise Bakery",
+    "address": "123 Bread St, Sampletown",
+    "phone": "555-111-2222",
+    "website": "https://sunrisebakery.com",
+    "image": "sunrise-bakery.png",
+    "membership": 3
   },
   {
-    "name": "Beta Books",
-    "address": "456 Oak St, Sampletown, ST 12345",
-    "phone": "(555) 987-6543",
-    "website": "https://beta-books.example.com",
-    "image": "images/beta-logo.png",
-    "membershipLevel": 2,
-    "description": "Your neighborhood bookstore."
+    "name": "TechGenius",
+    "address": "456 Silicon Blvd, Sampletown",
+    "phone": "555-222-3333",
+    "website": "https://techgenius.io",
+    "image": "techgenius.png",
+    "membership": 2
   },
   {
-    "name": "Gamma Gardens",
-    "address": "789 Pine St, Sampletown, ST 12345",
-    "phone": "(555) 222-3333",
-    "website": "https://gamma-gardens.example.com",
-    "image": "images/gamma-logo.png",
-    "membershipLevel": 1,
-    "description": "Beautiful garden supplies and services."
+    "name": "GreenLeaf Market",
+    "address": "789 Organic Rd, Sampletown",
+    "phone": "555-333-4444",
+    "website": "https://greenleafmarket.com",
+    "image": "greenleaf.png",
+    "membership": 1
   },
   {
-    "name": "Delta Designs",
-    "address": "135 Maple Ave, Sampletown, ST 12345",
-    "phone": "(555) 444-5555",
-    "website": "https://delta-designs.example.com",
-    "image": "images/delta-logo.png",
-    "membershipLevel": 3,
-    "description": "Innovative design and branding solutions."
+    "name": "FastFix Tech",
+    "address": "321 Repair Lane, Sampletown",
+    "phone": "555-444-5555",
+    "website": "https://fastfixtech.com",
+    "image": "fastfix.png",
+    "membership": 2
   },
   {
-    "name": "Epsilon Eats",
-    "address": "246 Birch Rd, Sampletown, ST 12345",
-    "phone": "(555) 666-7777",
-    "website": "https://epsilon-eats.example.com",
-    "image": "images/epsilon-logo.png",
-    "membershipLevel": 2,
-    "description": "Local favorite for delicious meals."
+    "name": "Chic Boutique",
+    "address": "654 Fashion Ave, Sampletown",
+    "phone": "555-555-6666",
+    "website": "https://chicboutique.com",
+    "image": "chicboutique.png",
+    "membership": 3
   },
   {
-    "name": "Zeta Zoo",
-    "address": "357 Cedar Blvd, Sampletown, ST 12345",
-    "phone": "(555) 888-9999",
-    "website": "https://zeta-zoo.example.com",
-    "image": "images/zeta-logo.png",
-    "membershipLevel": 1,
-    "description": "Fun for the whole family."
+    "name": "AutoWorld",
+    "address": "987 Drive St, Sampletown",
+    "phone": "555-666-7777",
+    "website": "https://autoworld.com",
+    "image": "autoworld.png",
+    "membership": 1
   },
   {
-    "name": "Eta Electronics",
-    "address": "468 Spruce St, Sampletown, ST 12345",
-    "phone": "(555) 101-2020",
-    "website": "https://eta-electronics.example.com",
-    "image": "images/eta-logo.png",
-    "membershipLevel": 3,
-    "description": "Top-tier electronics and gadgets."
+    "name": "Health First Clinic",
+    "address": "321 Wellness Rd, Sampletown",
+    "phone": "555-777-8888",
+    "website": "https://healthfirstclinic.com",
+    "image": "healthfirst.png",
+    "membership": 3
   }
 ]
-
-
