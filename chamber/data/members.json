@@ -1,58 +1,58 @@
 [
   {
-    "name": "Sunrise Bakery",
-    "address": "123 Bread St, Sampletown",
-    "phone": "555-111-2222",
-    "website": "https://sunrisebakery.com",
-    "image": "sunrise-bakery.png",
-    "membership": 3
-  },
-  {
-    "name": "TechGenius",
-    "address": "456 Silicon Blvd, Sampletown",
+    "name": "TechZone",
+    "address": "123 Silicon Blvd, Sampletown",
     "phone": "555-222-3333",
-    "website": "https://techgenius.io",
-    "image": "techgenius.png",
-    "membership": 2
-  },
-  {
-    "name": "GreenLeaf Market",
-    "address": "789 Organic Rd, Sampletown",
-    "phone": "555-333-4444",
-    "website": "https://greenleafmarket.com",
-    "image": "greenleaf.png",
-    "membership": 1
-  },
-  {
-    "name": "FastFix Tech",
-    "address": "321 Repair Lane, Sampletown",
-    "phone": "555-444-5555",
-    "website": "https://fastfixtech.com",
-    "image": "fastfix.png",
-    "membership": 2
-  },
-  {
-    "name": "Chic Boutique",
-    "address": "654 Fashion Ave, Sampletown",
-    "phone": "555-555-6666",
-    "website": "https://chicboutique.com",
-    "image": "chicboutique.png",
+    "website": "https://techzone.io",
+    "image": "techzone.png",
     "membership": 3
   },
   {
-    "name": "AutoWorld",
-    "address": "987 Drive St, Sampletown",
-    "phone": "555-666-7777",
-    "website": "https://autoworld.com",
-    "image": "autoworld.png",
+    "name": "Ice Cream Land",
+    "address": "456 Sweet St, Sampletown",
+    "phone": "555-333-4444",
+    "website": "https://icecreamland.com",
+    "image": "icecreamland.png",
+    "membership": 2
+  },
+  {
+    "name": "Healthy Eats",
+    "address": "789 Fresh Ave, Sampletown",
+    "phone": "555-444-5555",
+    "website": "https://healthyeats.com",
+    "image": "healthyeats.png",
     "membership": 1
   },
   {
-    "name": "Health First Clinic",
-    "address": "321 Wellness Rd, Sampletown",
+    "name": "Green Farm",
+    "address": "321 Organic Rd, Sampletown",
+    "phone": "555-555-6666",
+    "website": "https://greenfarm.com",
+    "image": "greenfarm.png",
+    "membership": 3
+  },
+  {
+    "name": "Fit Club",
+    "address": "654 Workout Ln, Sampletown",
+    "phone": "555-666-7777",
+    "website": "https://fitclub.com",
+    "image": "fitclub.png",
+    "membership": 2
+  },
+  {
+    "name": "Computech",
+    "address": "987 Tech Park, Sampletown",
     "phone": "555-777-8888",
-    "website": "https://healthfirstclinic.com",
-    "image": "healthfirst.png",
+    "website": "https://computechexample.com",
+    "image": "computech.png",
+    "membership": 1
+  },
+  {
+    "name": "City Books",
+    "address": "147 Book St, Sampletown",
+    "phone": "555-888-9999",
+    "website": "https://citybooks.com",
+    "image": "citybooks.png",
     "membership": 3
   }
 ]
