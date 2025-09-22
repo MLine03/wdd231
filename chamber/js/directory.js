@@ -1,53 +1,57 @@
-// Footer Info
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
-
-// Toggle View Buttons
-const gridBtn = document.getElementById("gridViewBtn");
-const listBtn = document.getElementById("listViewBtn");
-const memberSection = document.getElementById("members");
-
-gridBtn.addEventListener("click", () => {
-  memberSection.classList.add("grid-view");
-  memberSection.classList.remove("list-view");
-  gridBtn.setAttribute("aria-pressed", "true");
-  listBtn.setAttribute("aria-pressed", "false");
-});
-
-listBtn.addEventListener("click", () => {
-  memberSection.classList.add("list-view");
-  memberSection.classList.remove("grid-view");
-  listBtn.setAttribute("aria-pressed", "true");
-  gridBtn.setAttribute("aria-pressed", "false");
-});
-
-// Fetch and Display Members
-async function getMembers() {
+// Fetch and display members
+async function loadMembers() {
   try {
-    const response = await fetch("../data/members.json");
-    if (!response.ok) throw new Error("Network response was not ok");
+    const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error('Failed to fetch members data');
     const members = await response.json();
     displayMembers(members);
   } catch (error) {
-    console.error("Error loading members:", error);
+    console.error('Error loading members:', error);
   }
 }
 
 function displayMembers(members) {
+  const container = document.getElementById('members');
+  container.innerHTML = ''; // Clear current members
+
   members.forEach(member => {
-    const card = document.createElement("section");
-    card.classList.add("member-card");
+    const card = document.createElement('div');
+    card.className = 'member-card';
 
     card.innerHTML = `
-      <img src="../images/${member.image}" alt="${member.name} logo">
+      <img src="images/${member.image}" alt="${member.name} logo" />
       <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <a href="${member.website}" target="_blank">Visit Website</a>
     `;
 
-    memberSection.appendChild(card);
+    container.appendChild(card);
   });
 }
 
-getMembers();
+// Toggle between grid and list views
+const gridBtn = document.getElementById('gridViewBtn');
+const listBtn = document.getElementById('listViewBtn');
+const membersContainer = document.getElementById('members');
+
+gridBtn.addEventListener('click', () => {
+  membersContainer.classList.add('grid-view');
+  membersContainer.classList.remove('list-view');
+  gridBtn.setAttribute('aria-pressed', 'true');
+  listBtn.setAttribute('aria-pressed', 'false');
+});
+
+listBtn.addEventListener('click', () => {
+  membersContainer.classList.add('list-view');
+  membersContainer.classList.remove('grid-view');
+  listBtn.setAttribute('aria-pressed', 'true');
+  gridBtn.setAttribute('aria-pressed', 'false');
+});
+
+// Footer dynamic year and last modified date
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// Load members on page load
+loadMembers();
