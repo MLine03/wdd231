@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sample Park",
+    "address": "100 Park Ln",
+    "description": "Enjoy family-friendly fun with trails, playgrounds, and events.",
+    "image": "images/city-park.webp"
+  },
+  {
+    "name": "Sample Museum",
+    "address": "200 History Ave",
+    "description": "Explore exhibits about the town’s past and future.",
+    "image": "images/museum.webp"
+  },
+  {
+    "name": "Sample Farmers Market",
+    "address": "300 Market St",
+    "description": "Shop local produce and goods every weekend.",
+    "image": "images/market.webp"
+  },
+  {
+    "name": "Lake Sample Trail",
+    "address": "400 Trail Blvd",
+    "description": "A scenic lakeside trail for walkers, runners, and bikers.",
+    "image": "images/trail.webp"
+  },
+  {
+    "name": "Sample Library",
+    "address": "500 Library Rd",
+    "description": "Modern library with tech access and family programs.",
+    "image": "images/library.webp"
+  },
+  {
+    "name": "Sample Art Center",
+    "address": "600 Creative St",
+    "description": "View and make art in this lively community space.",
+    "image": "images/art-center.webp"
+  },
+  {
+    "name": "Sample Tech Hub",
+    "address": "700 Innovation Pkwy",
+    "description": "A co-working space supporting startups and creators.",
+    "image": "images/tech-hub.webp"
+  },
+  {
+    "name": "Sample High School",
+    "address": "800 School Way",
+    "description": "Top-ranked public school with diverse programs.",
+    "image": "images/highschool.webp"
+  }
+]

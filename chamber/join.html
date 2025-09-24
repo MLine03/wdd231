@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" /> <!-- fixed meta charset -->
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join the Chamber of Commerce - Membership Application</title>
-  <meta name="description" content="Apply to join the Chamber of Commerce and choose your membership level with exclusive benefits." />
-  <meta name="author" content="meline levao" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Join the Chamber of Commerce" />
-  <meta property="og:description" content="Become a member and enjoy exclusive benefits." />
+  <title>Join the Chamber | Sampletown</title>
+  <meta name="description" content="Become a member of the Sampletown Chamber of Commerce. Fill out our membership form." />
+  <meta name="author" content="Your Name or Chamber" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Join Sampletown Chamber" />
+  <meta property="og:description" content="Become part of Sampletown’s business community." />
   <meta property="og:image" content="images/og-image.png" />
-  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/join.html" />
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/join.html" />
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
 </head>
 <body>
   <header>
+    <h2>Sampletown Chamber of Commerce</h2>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
         <li><a href="join.html" aria-current="page">Join</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -28,46 +34,46 @@
   </header>
 
   <main>
-    <h1>Join the Chamber of Commerce - Membership Application</h1>
+    <h1>Join the Chamber</h1>
+    <p>Fill out the form below to become a member of the Sampletown Chamber of Commerce.</p>
 
-    <form action="thankyou.html" method="POST" aria-label="Join the Chamber of Commerce Form">
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" required />
+    <form action="thankyou.html" method="post">
+      <div class="form-group">
+        <label for="name">Name<span aria-hidden="true">*</span>:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-      <label for="businessname">Business Name:</label>
-      <input type="text" id="businessname" name="businessname" required />
+      <div class="form-group">
+        <label for="email">Email<span aria-hidden="true">*</span>:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required />
+      <div class="form-group">
+        <label for="business">Business / Organization:</label>
+        <input type="text" id="business" name="business" />
+      </div>
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required />
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" />
+      </div>
 
-      <label for="membership">Membership Level:</label>
-      <select id="membership" name="membership" required>
-        <option value="">--Please choose an option--</option>
-        <option value="gold">Gold</option>
-        <option value="silver">Silver</option>
-        <option value="bronze">Bronze</option>
-      </select>
+      <div class="form-group">
+        <label for="message">Tell us about your business / why you want to join:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
 
-      <label for="address">Business Address:</label>
-      <input type="text" id="address" name="address" />
-
-      <label for="website">Website:</label>
-      <input type="url" id="website" name="website" />
-
-      <label for="comments">Additional Comments:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea>
-
-      <input type="hidden" name="form-name" value="join-form" />
-
-      <input type="submit" value="Join Now" />
+      <button type="submit">Submit</button>
     </form>
   </main>
 
   <footer>
-    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+    <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce</p>
   </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
