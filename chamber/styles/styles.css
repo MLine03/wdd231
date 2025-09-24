@@ -1,18 +1,25 @@
-@media (min-width: 641px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "card1 card2"
-      "card3 card4"
-      "card5 card6"
-      "card7 card8";
-  }
+.attractions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
-@media (min-width: 1025px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "card1 card2 card3 card4"
-      "card5 card6 card7 card8";
+
+.attraction-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.attraction-card figure img {
+  max-width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+/* Hover effect only on medium and large screens */
+@media (min-width: 641px) {
+  .attraction-card figure img:hover {
+    filter: brightness(85%) contrast(110%);
   }
 }

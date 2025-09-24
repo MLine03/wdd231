@@ -1,75 +1,46 @@
-const membersSection = document.getElementById('members');
-const gridBtn = document.getElementById('gridViewBtn');
-const listBtn = document.getElementById('listViewBtn');
+// Fetch attraction data and render cards
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('data/attractions.json')
+    .then(response => response.json())
+    .then(data => renderAttractions(data))
+    .catch(err => console.error('Failed to load attractions:', err));
+});
 
-// Load members from JSON
-async function loadMembers() {
-  try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Network response was not ok');
+function renderAttractions(attractions) {
+  const container = document.getElementById('attractions');
 
-    const members = await response.json();
-    displayMembers(members);
-  } catch (error) {
-    membersSection.innerHTML = `<p>Sorry, failed to load members data.</p>`;
-    console.error('Fetch error:', error);
-  }
-}
-
-// Render member cards
-function displayMembers(members) {
-  membersSection.innerHTML = '';
-
-  members.forEach(member => {
+  attractions.forEach(item => {
     const card = document.createElement('article');
-    card.classList.add('member-card');
+    card.classList.add('attraction-card');
 
-    // Border color by membership level
-    if (member.membership === 3) {
-      card.style.borderColor = 'gold';
-    } else if (member.membership === 2) {
-      card.style.borderColor = 'silver';
-    } else {
-      card.style.borderColor = '#ccc';
-    }
+    const title = document.createElement('h2');
+    title.textContent = item.title;
 
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo" />
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>Phone: ${member.phone}</p>
-      <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
-    `;
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = item.image;
+    img.alt = item.title + " photo";
+    img.width = 300;   // specify real image width
+    img.height = 200;  // specify real image height
+    img.setAttribute('fetchpriority', 'high'); // prioritize image loading
+    figure.appendChild(img);
 
-    membersSection.appendChild(card);
+    const addr = document.createElement('address');
+    addr.textContent = item.address;
+
+    const desc = document.createElement('p');
+    desc.textContent = item.description;
+
+    const btn = document.createElement('button');
+    btn.textContent = "Learn More";
+    btn.addEventListener('click', () => alert(`Learn more about ${item.title}`));
+
+    card.appendChild(title);
+    card.appendChild(figure);
+    card.appendChild(addr);
+    card.appendChild(desc);
+    card.appendChild(btn);
+
+    container.appendChild(card);
   });
 }
-
-// Toggle between grid and list views
-function setGridView() {
-  membersSection.classList.add('grid-view');
-  membersSection.classList.remove('list-view');
-  gridBtn.setAttribute('aria-pressed', 'true');
-  listBtn.setAttribute('aria-pressed', 'false');
-}
-
-function setListView() {
-  membersSection.classList.add('list-view');
-  membersSection.classList.remove('grid-view');
-  gridBtn.setAttribute('aria-pressed', 'false');
-  listBtn.setAttribute('aria-pressed', 'true');
-}
-
-// Event listeners for toggle buttons
-gridBtn.addEventListener('click', setGridView);
-listBtn.addEventListener('click', setListView);
-
-// Footer dates
-document.getElementById('currentYear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-// Initialize page
-window.addEventListener('DOMContentLoaded', () => {
-  loadMembers();
-  setGridView(); // default view
-});

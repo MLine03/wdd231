@@ -1,50 +1,50 @@
 [
   {
-    "name": "Sample Park",
-    "address": "100 Park Ln",
-    "description": "Enjoy family-friendly fun with trails, playgrounds, and events.",
-    "image": "images/city-park.webp"
+    "title": "TechZone",
+    "image": "images/techzone.webp",
+    "address": "123 Tech Blvd, Sampletown",
+    "description": "The leading technology hub in Sampletown, offering innovative solutions."
   },
   {
-    "name": "Sample Museum",
-    "address": "200 History Ave",
-    "description": "Explore exhibits about the town’s past and future.",
-    "image": "images/museum.webp"
+    "title": "Green Farm",
+    "image": "images/greenfarm.webp",
+    "address": "456 Greenway, Sampletown",
+    "description": "Organic farm and farmers market with fresh produce all year round."
   },
   {
-    "name": "Sample Farmers Market",
-    "address": "300 Market St",
-    "description": "Shop local produce and goods every weekend.",
-    "image": "images/market.webp"
+    "title": "Ice Cream Land",
+    "image": "images/icecreamland.webp",
+    "address": "789 Sweet St, Sampletown",
+    "description": "Family-owned ice cream shop with classic and creative flavors."
   },
   {
-    "name": "Lake Sample Trail",
-    "address": "400 Trail Blvd",
-    "description": "A scenic lakeside trail for walkers, runners, and bikers.",
-    "image": "images/trail.webp"
+    "title": "Fit Club",
+    "image": "images/fitclub.webp",
+    "address": "101 Fitness Ave, Sampletown",
+    "description": "Your local gym offering group classes and personal training."
   },
   {
-    "name": "Sample Library",
-    "address": "500 Library Rd",
-    "description": "Modern library with tech access and family programs.",
-    "image": "images/library.webp"
+    "title": "Healthy Eats",
+    "image": "images/healthyeats.webp",
+    "address": "202 Wellness Rd, Sampletown",
+    "description": "Cafe focusing on fresh, healthy, and locally sourced meals."
   },
   {
-    "name": "Sample Art Center",
-    "address": "600 Creative St",
-    "description": "View and make art in this lively community space.",
-    "image": "images/art-center.webp"
+    "title": "City Books",
+    "image": "images/citybooks.webp",
+    "address": "303 Book Ln, Sampletown",
+    "description": "Independent bookstore with community events and readings."
   },
   {
-    "name": "Sample Tech Hub",
-    "address": "700 Innovation Pkwy",
-    "description": "A co-working space supporting startups and creators.",
-    "image": "images/tech-hub.webp"
+    "title": "Computech",
+    "image": "images/computech.webp",
+    "address": "404 Circuit St, Sampletown",
+    "description": "Computer repair and IT support services for the community."
   },
   {
-    "name": "Sample High School",
-    "address": "800 School Way",
-    "description": "Top-ranked public school with diverse programs.",
-    "image": "images/highschool.webp"
+    "title": "Local Arts",
+    "image": "images/localarts.webp",
+    "address": "505 Art Blvd, Sampletown",
+    "description": "Gallery and workshop space showcasing local artists."
   }
 ]

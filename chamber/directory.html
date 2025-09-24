@@ -2,49 +2,75 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Discover Sampletown</title>
-  <meta name="description" content="Discover what Sampletown has to offer! Explore key locations and features of our community." />
-  <meta name="author" content="Meline Levao" />
+  <title>Sampletown Chamber Discover</title>
+  <meta name="description" content="Discover the top attractions of Sampletown." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Discover Sampletown" />
-  <meta property="og:description" content="Explore the best spots in Sampletown." />
+  <meta property="og:title" content="Sampletown Chamber of Commerce" />
+  <meta property="og:description" content="Explore the best of Sampletown." />
   <meta property="og:image" content="images/og-image.png" />
   <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/discover.html" />
 
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Google Fonts async loading -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px) and (max-width: 1024px)" />
 </head>
 <body>
   <header>
-    <h2>Sampletown Chamber of Commerce</h2>
+    <h1>Sampletown Chamber of Commerce</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="discover.html" aria-current="page">Discover</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" title="Home page">Home</a></li>
+        <li><a href="directory.html" title="Member directory">Directory</a></li>
+        <li><a href="discover.html" title="Discover Sampletown" aria-current="page">Discover</a></li>
+        <li><a href="join.html" title="Join the Chamber">Join</a></li>
+        <li><a href="contact.html" title="Contact us">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Discover Sampletown</h1>
-    <aside id="visitMessage"></aside>
+    <h2>Discover Sampletown</h2>
 
-    <section id="cardGrid" class="grid-container" aria-label="Points of Interest">
-      <!-- JS populates 8 cards here -->
+    <aside id="visitor-message" aria-live="polite" role="region"></aside>
+
+    <section id="attractions" class="attractions-grid" aria-label="Sampletown Attractions">
+      <!-- Cards dynamically generated here -->
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated: <span id="lastModified"></span></p>
+    <p>
+      &copy; <span id="currentYear"></span> Sampletown Chamber of Commerce | Last Updated:
+      <time datetime="2025-09-23T20:31:49Z" id="lastModified">09/23/2025 20:31:49</time>
+    </p>
   </footer>
 
-  <script src="scripts/discover.js"></script>
+  <script>
+    // Update footer year and last modified
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+  </script>
+
+  <!-- Defer JS to avoid render blocking -->
+  <script defer src="scripts/visit.js"></script>
+  <script defer src="scripts/directory.js"></script>
 </body>
 </html>
