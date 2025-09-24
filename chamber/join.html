@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Join the Chamber of Commerce - Membership Application</title>
+  
   <meta name="description" content="Apply to join the Chamber of Commerce and choose your membership level with exclusive benefits." />
   <meta name="author" content="meline levao" />
   
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Join the Chamber of Commerce" />
@@ -17,10 +17,8 @@
   <meta property="og:image" content="images/og-image.png" />
   <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/join.html" />
   <meta property="og:type" content="website" />
-
-  <!-- CSS -->
+  
   <link rel="stylesheet" href="styles/styles.css" />
-
 </head>
 <body>
   <header>
@@ -30,54 +28,43 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-
+  
   <main>
-    <section>
-      <h2>Become a Member</h2>
-      <p>Fill out the form below to join the Chamber and enjoy exclusive member benefits.</p>
-
-      <form action="thankyou.html" method="POST" novalidate>
-        <fieldset>
-          <legend>Personal Information</legend>
-
-          <label for="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" required />
-
-          <label for="lastName">Last Name:</label>
-          <input type="text" id="lastName" name="lastName" required />
-
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required />
-        </fieldset>
-
-        <fieldset>
-          <legend>Membership Details</legend>
-
-          <label for="membershipLevel">Membership Level:</label>
-          <select id="membershipLevel" name="membershipLevel" required>
-            <option value="">--Select--</option>
-            <option value="gold">Gold</option>
-            <option value="silver">Silver</option>
-            <option value="bronze">Bronze</option>
-          </select>
-
-          <label for="comments">Additional Comments:</label>
-          <textarea id="comments" name="comments" rows="4" placeholder="Any special requests or questions?"></textarea>
-
-          <input type="hidden" name="source" value="chamber-join-page" />
-        </fieldset>
-
-        <button type="submit" value="Join Now">Join Now</button>
-      </form>
-    </section>
+    <h2>Membership Application Form</h2>
+    <form action="thankyou.html" method="POST">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+      
+      <label for="businessname">Business Name:</label>
+      <input type="text" id="businessname" name="businessname" required />
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+      
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+      
+      <label for="membership">Membership Level:</label>
+      <select id="membership" name="membership" required>
+        <option value="">--Please choose an option--</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+      
+      <input type="hidden" name="form-name" value="join-form" />
+      
+      <input type="submit" value="Join Now" />
+    </form>
   </main>
-
+  
   <footer>
     <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
   </footer>
