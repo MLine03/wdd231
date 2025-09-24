@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Join the Chamber of Commerce - Membership Application</title>
+  <title>Join the Chamber of Commerce - Become a Member Today</title>
   
-  <meta name="description" content="Apply to join the Chamber of Commerce and choose your membership level with exclusive benefits." />
+  <meta name="description" content="Apply to become a member of the Chamber of Commerce. Choose from various membership levels and enjoy exclusive benefits." />
   <meta name="author" content="meline levao" />
   
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   
-  <!-- Open Graph meta tags -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Join the Chamber of Commerce" />
-  <meta property="og:description" content="Become a member and enjoy exclusive benefits." />
+  <meta property="og:description" content="Become a member of the Chamber and enjoy exclusive benefits and networking opportunities." />
   <meta property="og:image" content="images/og-image.png" />
   <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/join.html" />
   
@@ -25,24 +25,81 @@
 <body>
   <header>
     <h2>Chamber of Commerce</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="join.html" aria-current="page">Join</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
   <main>
     <h1>Join the Chamber of Commerce</h1>
-    <!-- The rest of your form content goes here -->
+
+    <form method="get" action="thankyou.html" novalidate>
+      <label for="firstName">
+        First Name*
+        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+      </label>
+
+      <label for="lastName">
+        Last Name*
+        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+      </label>
+
+      <label for="orgTitle">
+        Organizational Title
+        <input type="text" id="orgTitle" name="orgTitle" pattern="^[A-Za-z\s-]{7,}$" title="At least 7 letters, spaces or hyphens only" autocomplete="organization-title" />
+      </label>
+
+      <label for="email">
+        Email Address*
+        <input type="email" id="email" name="email" required placeholder="example@example.com" autocomplete="email" />
+      </label>
+
+      <label for="mobile">
+        Mobile Phone Number*
+        <input type="tel" id="mobile" name="mobile" required autocomplete="tel" />
+      </label>
+
+      <label for="businessName">
+        Business/Organization Name*
+        <input type="text" id="businessName" name="businessName" required autocomplete="organization" />
+      </label>
+
+      <label for="membershipLevel">
+        Membership Level*
+        <select id="membershipLevel" name="membershipLevel" required>
+          <option value="" disabled selected>Select a level</option>
+          <option value="NP Membership">NP Membership (Non-Profit, No Fee)</option>
+          <option value="Bronze Membership">Bronze Membership</option>
+          <option value="Silver Membership">Silver Membership</option>
+          <option value="Gold Membership">Gold Membership</option>
+        </select>
+      </label>
+
+      <label for="description">
+        Business/Organization Description
+        <textarea id="description" name="description" rows="5"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp" />
+
+      <input type="submit" value="Join Now" />
+    </form>
   </main>
-  
+
   <footer>
     <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
   </footer>
+
+  <script>
+    // Add timestamp on submit
+    document.querySelector('form').addEventListener('submit', function() {
+      document.getElementById('timestamp').value = new Date().toISOString();
+    });
+  </script>
 </body>
 </html>
