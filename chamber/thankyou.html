@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+    }
+    .confirmation {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Joining!</h1>
+  </header>
+  <main>
+    <div class="confirmation">
+      <p>Thank you for your submission. Here's what we received:</p>
+      <ul>
+        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+        <li><strong>Email:</strong> <span id="email"></span></li>
+        <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
+        <li><strong>Organization:</strong> <span id="organization"></span></li>
+        <li><strong>Timestamp:</strong> <span id="timestamp"></span></li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("firstName").textContent = params.get("firstName") || "";
+    document.getElementById("lastName").textContent = params.get("lastName") || "";
+    document.getElementById("email").textContent = params.get("email") || "";
+    document.getElementById("phone").textContent = params.get("phone") || "";
+    document.getElementById("organization").textContent = params.get("organization") || "";
+    document.getElementById("timestamp").textContent = params.get("timestamp") || "";
+  </script>
+</body>
+</html>
