@@ -1,53 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 1rem;
-    }
-    .confirmation {
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: auto;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for joining the Sampletown Chamber of Commerce.">
+  <meta name="author" content="Meline Levao">
+  <title>Thank You | Sampletown Chamber</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header>
     <h1>Thank You for Joining!</h1>
   </header>
+
   <main>
-    <div class="confirmation">
-      <p>Thank you for your submission. Here's what we received:</p>
-      <ul>
-        <li><strong>First Name:</strong> <span id="firstName"></span></li>
-        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
-        <li><strong>Email:</strong> <span id="email"></span></li>
-        <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
-        <li><strong>Organization:</strong> <span id="organization"></span></li>
-        <li><strong>Timestamp:</strong> <span id="timestamp"></span></li>
-      </ul>
-    </div>
+    <section>
+      <h2>Your Submission:</h2>
+      <p><strong>First Name:</strong> <span id="firstName"></span></p>
+      <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Phone:</strong> <span id="phone"></span></p>
+      <p><strong>Organization:</strong> <span id="organization"></span></p>
+      <p><strong>Submitted At:</strong> <span id="timestamp"></span></p>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Chamber of Commerce</p>
+    <p>&copy; 2025 Sampletown Chamber of Commerce | Created by Meline Levao</p>
   </footer>
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    document.getElementById("firstName").textContent = params.get("firstName") || "";
-    document.getElementById("lastName").textContent = params.get("lastName") || "";
-    document.getElementById("email").textContent = params.get("email") || "";
-    document.getElementById("phone").textContent = params.get("phone") || "";
-    document.getElementById("organization").textContent = params.get("organization") || "";
-    document.getElementById("timestamp").textContent = params.get("timestamp") || "";
+    document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
+    document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
+    document.getElementById("email").textContent = params.get("email") || "N/A";
+    document.getElementById("phone").textContent = params.get("phone") || "N/A";
+    document.getElementById("organization").textContent = params.get("organization") || "N/A";
+    document.getElementById("timestamp").textContent = params.get("timestamp") || "N/A";
   </script>
 </body>
 </html>
