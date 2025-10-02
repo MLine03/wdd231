@@ -1,0 +1,58 @@
+[
+  {
+    "id": "card1",
+    "name": "Sunset Park",
+    "address": "123 Park Lane, YourTown",
+    "description": "A beautiful park with walking trails and sunset views.",
+    "image": "images/sunset-park.webp"
+  },
+  {
+    "id": "card2",
+    "name": "Historic Museum",
+    "address": "45 History St, YourTown",
+    "description": "Museum showcasing the rich history of the region.",
+    "image": "images/historic-museum.webp"
+  },
+  {
+    "id": "card3",
+    "name": "Local Market",
+    "address": "67 Market Rd, YourTown",
+    "description": "Vibrant market with fresh produce and crafts.",
+    "image": "images/local-market.webp"
+  },
+  {
+    "id": "card4",
+    "name": "Riverwalk",
+    "address": "89 River Rd, YourTown",
+    "description": "Scenic walking path along the riverbank.",
+    "image": "images/riverwalk.webp"
+  },
+  {
+    "id": "card5",
+    "name": "Community Theater",
+    "address": "10 Stage Ave, YourTown",
+    "description": "Performances and events all year round.",
+    "image": "images/community-theater.webp"
+  },
+  {
+    "id": "card6",
+    "name": "Botanical Gardens",
+    "address": "23 Garden Blvd, YourTown",
+    "description": "Explore diverse plant species in a peaceful setting.",
+    "image": "images/botanical-gardens.webp"
+  },
+  {
+    "id": "card7",
+    "name": "City Library",
+    "address": "55 Book St, YourTown",
+    "description": "A place to learn and read with community programs.",
+    "image": "images/city-library.webp"
+  },
+  {
+    "id": "card8",
+    "name": "Adventure Sports Center",
+    "address": "98 Adventure Way, YourTown",
+    "description": "Outdoor activities including kayaking and hiking.",
+    "image": "images/adventure-sports.webp"
+  }
+]

@@ -1,46 +1,71 @@
-// Fetch attraction data and render cards
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('data/attractions.json')
-    .then(response => response.json())
-    .then(data => renderAttractions(data))
-    .catch(err => console.error('Failed to load attractions:', err));
-});
+// Use ES Modules
+export async function fetchPlaces() {
+  try {
+    const response = await fetch('data/places.json');
+    if (!response.ok) throw new Error('Failed to fetch places');
+    const places = await response.json();
+    return places;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
 
-function renderAttractions(attractions) {
-  const container = document.getElementById('attractions');
+function createCard(place) {
+  const card = document.createElement('article');
+  card.classList.add('card');
+  card.setAttribute('id', place.id);
 
-  attractions.forEach(item => {
-    const card = document.createElement('article');
-    card.classList.add('attraction-card');
+  card.innerHTML = `
+    <h2>${place.name}</h2>
+    <figure>
+      <img src="${place.image}" alt="${place.name}" loading="lazy" />
+    </figure>
+    <address>${place.address}</address>
+    <p>${place.description}</p>
+    <button aria-label="Learn more about ${place.name}">Learn More</button>
+  `;
 
-    const title = document.createElement('h2');
-    title.textContent = item.title;
+  return card;
+}
 
-    const figure = document.createElement('figure');
-    const img = document.createElement('img');
-    img.src = item.image;
-    img.alt = item.title + " photo";
-    img.width = 300;   // specify real image width
-    img.height = 200;  // specify real image height
-    img.setAttribute('fetchpriority', 'high'); // prioritize image loading
-    figure.appendChild(img);
+function showVisitMessage() {
+  const visitMessage = document.getElementById('visit-message');
+  const now = Date.now();
+  const lastVisit = localStorage.getItem('lastVisit');
 
-    const addr = document.createElement('address');
-    addr.textContent = item.address;
+  if (!lastVisit) {
+    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const diffDays = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    if (diffDays < 1) {
+      visitMessage.textContent = "Back so soon! Awesome!";
+    } else if (diffDays === 1) {
+      visitMessage.textContent = "You last visited 1 day ago.";
+    } else {
+      visitMessage.textContent = `You last visited ${diffDays} days ago.`;
+    }
+  }
 
-    const desc = document.createElement('p');
-    desc.textContent = item.description;
+  localStorage.setItem('lastVisit', now);
+}
 
-    const btn = document.createElement('button');
-    btn.textContent = "Learn More";
-    btn.addEventListener('click', () => alert(`Learn more about ${item.title}`));
+// Initialize page
+async function init() {
+  showVisitMessage();
 
-    card.appendChild(title);
-    card.appendChild(figure);
-    card.appendChild(addr);
-    card.appendChild(desc);
-    card.appendChild(btn);
+  const places = await fetchPlaces();
+  const container = document.getElementById('cards-container');
 
+  if (places.length === 0) {
+    container.textContent = "Failed to load places. Please try again later.";
+    return;
+  }
+
+  places.forEach(place => {
+    const card = createCard(place);
     container.appendChild(card);
   });
 }
+
+init();

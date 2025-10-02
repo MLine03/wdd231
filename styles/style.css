@@ -1,72 +1,88 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #f8f9fa;
   color: #333;
-  background-color: #f9f9f9;
-  line-height: 1.6;
 }
 
-header nav {
-  display: flex;
-  align-items: center;
-  background-color: #004080;
-  padding: 1rem 2rem;
-}
-
-header nav img {
-  margin-right: 1rem;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-header nav a {
+header, footer {
+  background: #004080;
   color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-header nav a:hover,
-header nav a:focus {
-  text-decoration: underline;
-  outline: none;
-}
-
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #004080;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #0066cc;
-}
-
-footer {
-  background-color: #004080;
-  color: white;
+  padding: 1rem;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  position: fixed;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* Card styles */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card img {
   width: 100%;
-  bottom: 0;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Button */
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #004080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect on images for medium and large */
+@media (min-width: 641px) {
+  .card img:hover {
+    filter: brightness(85%);
+    transition: filter 0.3s ease;
+  }
 }
