@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discover Our Area - Chamber of Commerce</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/medium.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Our Area — Chamber Discover Page</title>
+  <meta name="description" content="Explore local attractions and community highlights in our area. Discover notable places, learn more, and get involved with the Chamber." />
+  <meta name="author" content="Your Name" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Discover Our Area — Chamber" />
+  <meta property="og:description" content="Check out 8 local attractions and what makes our region unique." />
+  <meta property="og:image" content="images/og-image.webp" />
+  <meta property="og:url" content="https://mline03.github.io/wdd231/chamber/discover.html" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/medium.css" />
 </head>
 <body>
   <header>
-    <h1>Chamber of Commerce - Discover Our Area</h1>
     <nav>
       <a href="../index.html">Home</a>
       <a href="discover.html">Discover</a>
@@ -18,17 +26,15 @@
   </header>
 
   <main>
-    <section id="visit-message" tabindex="0" aria-live="polite"></section>
-
-    <section id="cards-container" class="grid-container">
-      <!-- Cards will be dynamically inserted here -->
-    </section>
+    <h1>Discover Our Area</h1>
+    <section id="visit-message" class="visit-msg" tabindex="0" aria-live="polite"></section>
+    <section id="poi-cards" class="grid-container"></section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Chamber of Commerce</p>
+    <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
   </footer>
 
-  <script src="js/discover.js" type="module"></script>
+  <script src="scripts/discover.js" defer></script>
 </body>
 </html>

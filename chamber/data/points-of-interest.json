@@ -1,0 +1,50 @@
+[
+  {
+    "title": "TechZone",
+    "image": "images/techzone.webp",
+    "address": "123 Tech Blvd, Sampletown",
+    "description": "The leading technology hub in Sampletown, offering innovative solutions."
+  },
+  {
+    "title": "Green Farm",
+    "image": "images/greenfarm.webp",
+    "address": "456 Greenway, Sampletown",
+    "description": "Organic farm and farmers market with fresh produce all year round."
+  },
+  {
+    "title": "Ice Cream Land",
+    "image": "images/icecreamland.webp",
+    "address": "789 Sweet St, Sampletown",
+    "description": "Family-owned ice cream shop with classic and creative flavors."
+  },
+  {
+    "title": "Fit Club",
+    "image": "images/fitclub.webp",
+    "address": "101 Fitness Ave, Sampletown",
+    "description": "Your local gym offering group classes and personal training."
+  },
+  {
+    "title": "Healthy Eats",
+    "image": "images/healthyeats.webp",
+    "address": "202 Wellness Rd, Sampletown",
+    "description": "Cafe focusing on fresh, healthy, and locally sourced meals."
+  },
+  {
+    "title": "City Books",
+    "image": "images/citybooks.webp",
+    "address": "303 Book Ln, Sampletown",
+    "description": "Independent bookstore with community events and readings."
+  },
+  {
+    "title": "Computech",
+    "image": "images/computech.webp",
+    "address": "404 Circuit St, Sampletown",
+    "description": "Computer repair and IT support services for the community."
+  },
+  {
+    "title": "Local Arts",
+    "image": "images/localarts.webp",
+    "address": "505 Art Blvd, Sampletown",
+    "description": "Gallery and workshop space showcasing local artists."
+  }
+]

@@ -1,40 +1,49 @@
-// Update footer with date
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+async function loadPOIs() {
+  const response = await fetch('../data/points-of-interest.json');
+  const data = await response.json();
+  const container = document.getElementById('poi-cards');
 
-// Visit message
-const visitMessage = document.getElementById("visitMessage");
-const lastVisit = localStorage.getItem("lastVisit");
-const now = Date.now();
+  data.forEach((item, index) => {
+    const card = document.createElement('div');
+    card.classList.add('card', `card${index + 1}`);
 
-if (!lastVisit) {
-  visitMessage.textContent = "Welcome! Let us know if you have any questions.";
-} else {
-  const diffTime = now - lastVisit;
-  const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-  visitMessage.textContent =
-    days < 1
-      ? "Back so soon! Awesome!"
-      : `You last visited ${days} ${days === 1 ? "day" : "days"} ago.`;
-}
-localStorage.setItem("lastVisit", now);
+    card.innerHTML = `
+      <h2>${item.title}</h2>
+      <figure>
+        <img src="../${item.image}" alt="${item.title}">
+      </figure>
+      <address>${item.address}</address>
+      <p>${item.description}</p>
+      <button>Learn More</button>
+    `;
 
-// Load attraction cards
-fetch("data/attractions.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const grid = document.getElementById("cardGrid");
-    data.forEach((item, index) => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.style.gridArea = `card${index + 1}`;
-      card.innerHTML = `
-        <h2>${item.name}</h2>
-        <figure><img src="${item.image}" alt="${item.name}" /></figure>
-        <address>${item.address}</address>
-        <p>${item.description}</p>
-        <button>Learn More</button>
-      `;
-      grid.appendChild(card);
-    });
+    container.appendChild(card);
   });
+}
+
+function displayVisitMessage() {
+  const container = document.getElementById('visit-message');
+  const now = Date.now();
+  const lastVisit = localStorage.getItem('lastVisit');
+
+  let message = "";
+
+  if (!lastVisit) {
+    message = "Welcome! Let us know if you have any questions.";
+  } else {
+    const diffInMs = now - parseInt(lastVisit);
+    const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+
+    if (diffInDays === 0) {
+      message = "Back so soon! Awesome!";
+    } else {
+      message = `You last visited ${diffInDays} day${diffInDays === 1 ? '' : 's'} ago.`;
+    }
+  }
+
+  container.textContent = message;
+  localStorage.setItem('lastVisit', now);
+}
+
+displayVisitMessage();
+loadPOIs();

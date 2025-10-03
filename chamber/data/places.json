@@ -10,7 +10,7 @@
     "id": "card2",
     "name": "Historic Museum",
     "address": "45 History St, YourTown",
-    "description": "Museum showcasing the rich history of the region.",
+    "description": "Museum showcasing the region's rich history.",
     "image": "images/historic-museum.webp"
   },
   {
@@ -24,35 +24,35 @@
     "id": "card4",
     "name": "Riverwalk",
     "address": "89 River Rd, YourTown",
-    "description": "Scenic walking path along the riverbank.",
+    "description": "Scenic walking path along the river.",
     "image": "images/riverwalk.webp"
   },
   {
     "id": "card5",
     "name": "Community Theater",
     "address": "10 Stage Ave, YourTown",
-    "description": "Performances and events all year round.",
+    "description": "Local performances and cultural events.",
     "image": "images/community-theater.webp"
   },
   {
     "id": "card6",
     "name": "Botanical Gardens",
     "address": "23 Garden Blvd, YourTown",
-    "description": "Explore diverse plant species in a peaceful setting.",
+    "description": "Explore native and exotic plants in lush gardens.",
     "image": "images/botanical-gardens.webp"
   },
   {
     "id": "card7",
     "name": "City Library",
     "address": "55 Book St, YourTown",
-    "description": "A place to learn and read with community programs.",
+    "description": "Public library hosting community programs.",
     "image": "images/city-library.webp"
   },
   {
     "id": "card8",
-    "name": "Adventure Sports Center",
+    "name": "Adventure Center",
     "address": "98 Adventure Way, YourTown",
-    "description": "Outdoor activities including kayaking and hiking.",
+    "description": "Outdoor sports activities, hiking, kayaking, and more.",
     "image": "images/adventure-sports.webp"
   }
 ]
